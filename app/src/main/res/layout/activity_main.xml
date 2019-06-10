@@ -28,7 +28,7 @@
         app:layout_constraintHorizontal_bias="0.371"
         app:layout_constraintStart_toStartOf="@+id/editText2"
         app:layout_constraintTop_toBottomOf="@+id/editText2"
-        app:layout_constraintVertical_bias="0.321" />
+        app:layout_constraintVertical_bias="0.483" />
 
     <EditText
         android:id="@+id/editText"
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="292dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
@@ -53,14 +53,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.466" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="323dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="272dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/edittext"
         android:drawableStart="@drawable/ic_dep"
         android:drawableLeft="@drawable/ic_dep"
@@ -78,6 +78,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editText"
         app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:layout_constraintVertical_bias="0.878" />
+        app:layout_constraintVertical_bias="0.072" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
