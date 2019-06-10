@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,11 +10,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Choose from below"
         android:layout_margin="10dp"
+        android:fontFamily="@font/oxygen_light"
+        android:gravity="center"
+        android:text="Choose from below"
         android:textColor="#ffff"
         android:textSize="23sp"
-        android:gravity="center"/>
+        app:fontFamily="@font/oxygen" />
 
     <View
         android:layout_width="wrap_content"
@@ -25,12 +28,13 @@
         android:id="@+id/cse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:fontFamily="@font/oxygen_mono"
         android:layout_margin="10dp"
-        android:textColor="#ffff"
+        android:fontFamily="@font/oxygen_mono"
+        android:gravity="center"
         android:text="CSE"
-        android:textSize="23sp" />
+        android:textColor="#ffff"
+        android:textSize="23sp"
+        app:fontFamily="@font/oxygen_light" />
 
     <View
         android:layout_width="wrap_content"
@@ -41,12 +45,13 @@
         android:id="@+id/eee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_margin="10dp"
-        android:textColor="#ffff"
         android:fontFamily="@font/oxygen_mono"
+        android:gravity="center"
         android:text="EEE"
-        android:textSize="23sp" />
+        android:textColor="#ffff"
+        android:textSize="23sp"
+        app:fontFamily="@font/oxygen_light" />
 
     <View
         android:layout_width="wrap_content"
@@ -57,12 +62,13 @@
         android:id="@+id/ece"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#ffff"
         android:layout_margin="10dp"
-        android:gravity="center"
         android:fontFamily="@font/oxygen_mono"
+        android:gravity="center"
         android:text="ECE"
-        android:textSize="23sp" />
+        android:textColor="#ffff"
+        android:textSize="23sp"
+        app:fontFamily="@font/oxygen" />
 
 
 
