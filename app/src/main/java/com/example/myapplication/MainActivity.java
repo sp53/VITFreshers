@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -44,5 +45,11 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+    }
+
+    public void login(View view) {
+        Intent intent = new Intent(this, AfterLoginActivity.class);
+        startActivity(intent);
+        Log.d("CLICKED", "TRUE");
     }
 }
