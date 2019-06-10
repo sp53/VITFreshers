@@ -43,6 +43,22 @@ public class MainActivity extends AppCompatActivity {
                         dialog.dismiss();
                     }
                 });
+                TextView eee = dialog.findViewById(R.id.eee);
+                eee.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        departement.setText("EEE");
+                        dialog.dismiss();
+                    }
+                });
+                TextView ece = dialog.findViewById(R.id.ece);
+                ece.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        departement.setText("ECE");
+                        dialog.dismiss();
+                    }
+                });
             }
         });
     }
