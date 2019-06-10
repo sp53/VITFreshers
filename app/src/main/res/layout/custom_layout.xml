@@ -29,7 +29,7 @@
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="1dp"
-                android:background="#ffff" />
+                android:background="#607385" />
 
 
             <TextView
@@ -46,8 +46,7 @@
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:background="#ffff" />
+                android:layout_height="5dp" />
 
             <TextView
                 android:id="@+id/eee"
@@ -63,15 +62,14 @@
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:background="#ffff" />
+                android:layout_height="5dp" />
 
             <TextView
                 android:id="@+id/ece"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:fontFamily="@font/oxygen_mono"
+                android:fontFamily="@font/oxygen_light"
                 android:gravity="center"
                 android:text="ECE"
                 android:textColor="#ffff"
