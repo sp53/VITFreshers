@@ -103,7 +103,7 @@
         android:shadowDx="8"
         android:shadowDy="8"
         android:shadowRadius="20"
-        android:text="VENUE"
+        android:text="SCHEDULE"
         android:textColor="#ffff"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
