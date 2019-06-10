@@ -1,75 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/custom_layout_styler">
+    android:background="@drawable/custom_layout_styler"
+    android:orientation="vertical">
 
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:fontFamily="@font/oxygen_light"
-        android:gravity="center"
-        android:text="Choose from below"
-        android:textColor="#ffff"
-        android:textSize="23sp"
-        app:fontFamily="@font/oxygen" />
+        android:layout_height="match_parent">
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#ffff"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="Choose from below"
+                android:textColor="#ffff"
+                android:textSize="23sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="#ffff" />
 
 
-    <TextView
-        android:id="@+id/cse"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:fontFamily="@font/oxygen_mono"
-        android:gravity="center"
-        android:text="CSE"
-        android:textColor="#ffff"
-        android:textSize="23sp"
-        app:fontFamily="@font/oxygen_light" />
+            <TextView
+                android:id="@+id/cse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/oxygen_mono"
+                android:gravity="center"
+                android:text="CSE"
+                android:textColor="#ffff"
+                android:textSize="20sp"
+                app:fontFamily="@font/oxygen_light" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#ffff" />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="#ffff" />
 
-    <TextView
-        android:id="@+id/eee"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:fontFamily="@font/oxygen_mono"
-        android:gravity="center"
-        android:text="EEE"
-        android:textColor="#ffff"
-        android:textSize="23sp"
-        app:fontFamily="@font/oxygen_light" />
+            <TextView
+                android:id="@+id/eee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/oxygen_mono"
+                android:gravity="center"
+                android:text="EEE"
+                android:textColor="#ffff"
+                android:textSize="20sp"
+                app:fontFamily="@font/oxygen_light" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#ffff"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="#ffff" />
 
-    <TextView
-        android:id="@+id/ece"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:fontFamily="@font/oxygen_mono"
-        android:gravity="center"
-        android:text="ECE"
-        android:textColor="#ffff"
-        android:textSize="23sp"
-        app:fontFamily="@font/oxygen" />
+            <TextView
+                android:id="@+id/ece"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/oxygen_mono"
+                android:gravity="center"
+                android:text="ECE"
+                android:textColor="#ffff"
+                android:textSize="20sp" />
+        </LinearLayout>
 
+    </ScrollView>
 
 
 </LinearLayout>
