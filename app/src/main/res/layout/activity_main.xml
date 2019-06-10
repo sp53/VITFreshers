@@ -27,7 +27,7 @@
         android:shadowRadius="10"
         android:text="Login"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editText2"
         app:layout_constraintHorizontal_bias="0.371"
