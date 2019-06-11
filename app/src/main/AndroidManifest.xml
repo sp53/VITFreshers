@@ -24,6 +24,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity
+            android:name=".ScheduleActivity"
+            android:parentActivityName=".AfterLoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AfterLoginActivity" />
+        </activity>
     </application>
 
 </manifest>

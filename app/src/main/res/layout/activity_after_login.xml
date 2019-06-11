@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     android:clipToPadding="false"
-    tools:context=".MainActivity">
+    tools:context=".AfterLoginActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -96,6 +96,7 @@
         android:background="@drawable/after_login_button"
         android:drawableLeft="@drawable/ic_account_balance_black_24dp"
         android:drawablePadding="1dp"
+        android:onClick="open_schedule_activity"
         android:fontFamily="@font/oxygen_light"
         android:paddingLeft="20dp"
         android:paddingRight="42dp"
