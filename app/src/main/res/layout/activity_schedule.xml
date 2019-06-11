@@ -22,18 +22,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <ListView
-        android:id="@+id/schedule_listview"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:paddingTop="8dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="18dp"
-        android:paddingRight="18dp"
-        android:scrollbarThumbVertical="@android:color/transparent"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="15.0sp"
-        android:layout_height="wrap_content">
+        android:layout_height="60dp"
+        app:tabTextColor="#fff"
+        >
 
-    </ListView>
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="590dp"
+        android:layout_marginBottom="8dp">
+
+    </androidx.viewpager.widget.ViewPager>
+
 
 </LinearLayout>
