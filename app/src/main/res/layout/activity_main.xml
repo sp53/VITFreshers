@@ -9,7 +9,12 @@
     android:focusableInTouchMode="true"
     tools:context=".MainActivity">
 
-    <requestFocus />
+    <requestFocus
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/button"
@@ -100,10 +105,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="70dp"
-        android:fontFamily="@font/oxygen_light"
-        android:text="WELCOME !"
+        android:fontFamily="@font/courgette"
+        android:text="Welcome!"
         android:textColor="#ffff"
-        android:textSize="32sp"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -113,10 +118,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:fontFamily="@font/oxygen_light"
+        android:fontFamily="@font/courgette"
         android:text="Freshers"
         android:textColor="#ffff"
-        android:textSize="26sp"
+        android:textSize="31sp"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintHorizontal_bias="0.375"
