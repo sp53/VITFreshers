@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="match_parent"
+    android:layout_width="300dp"
     android:layout_height="match_parent"
     android:background="@drawable/custom_layout_styler">
 
     <TextView
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Proctor Name"
+        android:text="Proctor Details"
         android:layout_gravity="center"
         android:gravity="center"
         android:textColor="#ffff"
@@ -18,13 +18,49 @@
         android:background="@drawable/button" />
 
     <TextView
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="left"
         android:gravity="center"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        android:text="Ms. Janaki Meena"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:text="Name: Ms. Janaki Meena"
+        android:textColor="#ffff"
+        android:textSize="16sp"
+        android:fontFamily="@font/oxygen_light" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Building: AB1"
+        android:textColor="#ffff"
+        android:textSize="16sp"
+        android:fontFamily="@font/oxygen_light" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Floor: 2"
+        android:textColor="#ffff"
+        android:textSize="16sp"
+        android:fontFamily="@font/oxygen_light" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="15dp"
+        android:text="Room: 202"
         android:textColor="#ffff"
         android:textSize="16sp"
         android:fontFamily="@font/oxygen_light" />
