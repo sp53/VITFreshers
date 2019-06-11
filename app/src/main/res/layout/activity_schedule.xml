@@ -36,7 +36,7 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="30dp"
+        android:paddingBottom="10dp"
         android:layout_marginBottom="8dp">
 
     </androidx.viewpager.widget.ViewPager>
