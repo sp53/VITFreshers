@@ -23,11 +23,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final EditText departement = findViewById(R.id.editText2);
+        final EditText regNo = findViewById(R.id.editText);
+
 
         departement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("CHK", context.toString());
+
+                regNo.clearFocus();
+
                 final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.custom_layout);
 

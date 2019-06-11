@@ -9,6 +9,7 @@
     android:focusableInTouchMode="true"
     tools:context=".MainActivity">
 
+
     <requestFocus
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
@@ -39,10 +40,10 @@
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editText2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/editText2"
         app:layout_constraintTop_toBottomOf="@+id/editText2"
-        app:layout_constraintVertical_bias="0.42000002" />
+        app:layout_constraintVertical_bias="0.422" />
 
     <EditText
         android:id="@+id/editText"
