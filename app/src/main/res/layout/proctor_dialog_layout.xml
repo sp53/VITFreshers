@@ -13,9 +13,9 @@
         android:gravity="center"
         android:textColor="#ffff"
         android:textSize="18sp"
-        android:padding="8dp"
+        android:padding="12dp"
         android:fontFamily="@font/oxygen_light"
-        android:background="@drawable/button" />
+        android:background="@drawable/proctor_dialog_button" />
 
     <TextView
         android:layout_width="match_parent"

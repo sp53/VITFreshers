@@ -4,10 +4,6 @@
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="10dp" />
-            <padding android:bottom="4dp"
-                android:right="8dp"
-                android:left="8dp"
-                android:top="8dp" />
             <solid android:color="@color/colorPrimaryLight" />
         </shape>
     </item>
