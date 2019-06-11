@@ -33,6 +33,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="open_maps"
         android:background="@drawable/after_login_button"
         android:drawableLeft="@drawable/ic_directions"
         android:drawablePadding="1dp"

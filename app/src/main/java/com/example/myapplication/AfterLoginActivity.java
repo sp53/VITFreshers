@@ -34,6 +34,11 @@ public class AfterLoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void open_maps(View view) {
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
+
     public void show_proctor_name(View view) {
 
         final Button b=findViewById(R.id.button);
@@ -41,6 +46,8 @@ public class AfterLoginActivity extends AppCompatActivity {
         final Button b4=findViewById(R.id.button4);
 
         b.setVisibility(View.INVISIBLE);
+        b2.setVisibility(View.INVISIBLE);
+        b4.setVisibility(View.INVISIBLE);
 
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.proctor_dialog_layout);
@@ -50,6 +57,8 @@ public class AfterLoginActivity extends AppCompatActivity {
             @Override
             public void onDismiss(DialogInterface dialogInterface) {
                 b.setVisibility(View.VISIBLE);
+                b2.setVisibility(View.VISIBLE);
+                b4.setVisibility(View.VISIBLE);
 
             }
         });
