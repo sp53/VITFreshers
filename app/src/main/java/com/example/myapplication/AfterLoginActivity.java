@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.app.Dialog;
+
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+
 
 public class AfterLoginActivity extends AppCompatActivity {
 
@@ -33,6 +35,7 @@ public class AfterLoginActivity extends AppCompatActivity {
     }
 
     public void show_proctor_name(View view) {
+
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.proctor_dialog_layout);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
