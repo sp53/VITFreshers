@@ -66,10 +66,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
-                android:paddingBottom="15dp"
+                android:paddingBottom="10dp"
                 android:fontFamily="@font/oxygen_light"
                 android:gravity="center"
                 android:text="ECE"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ecm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="ECM"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/civil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="CIVIL"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mech"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="15dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="MECHANICAL"
                 android:textColor="#ffff"
                 android:textSize="16sp" />
         </LinearLayout>
