@@ -32,11 +32,13 @@ public class AfterLoginActivity extends AppCompatActivity {
     public void open_schedule_activity(View view) {
         Intent intent = new Intent(this, ScheduleActivity.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void open_maps(View view) {
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void show_proctor_name(View view) {
