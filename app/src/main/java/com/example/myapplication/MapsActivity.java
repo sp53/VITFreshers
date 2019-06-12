@@ -255,4 +255,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         return false;
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+    }
 }

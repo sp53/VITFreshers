@@ -49,4 +49,10 @@ public class AfterLoginActivity extends AppCompatActivity {
 
         dialog.show();
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+    }
 }
