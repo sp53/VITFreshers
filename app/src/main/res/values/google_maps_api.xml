@@ -20,9 +20,10 @@
     Once you have your key (it starts with "AIza"), replace the "google_maps_key"
     string in this file.
     //Sparsh API KEY // AIzaSyAKLklu2pI7P5h1ZdEvQ9R22m5IKgaGNKk
+    //Vaibhav API Key //  AIzaSyALr7gj-AYHVW0rWEnwfP-TCgiUgscySlg
     -->
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
-            AIzaSyALr7gj-AYHVW0rWEnwfP-TCgiUgscySlg
+            AIzaSyAKLklu2pI7P5h1ZdEvQ9R22m5IKgaGNKk
 
  </string>
 </resources>
