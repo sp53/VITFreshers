@@ -68,6 +68,7 @@
         map:layout_constraintEnd_toEndOf="parent"
         map:layout_constraintStart_toStartOf="parent"
         map:layout_constraintTop_toBottomOf="@+id/building"
-        tools:context=".MapsActivity" />
+        tools:context="com.example.styledmap.MapsActivityString"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
