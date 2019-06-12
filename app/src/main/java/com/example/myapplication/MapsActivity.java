@@ -24,6 +24,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.HashMap;
@@ -32,8 +33,10 @@ import java.util.Map;
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
-    private static GoogleMap mMap;
+    private GoogleMap mMap;
+    MarkerOptions mo;
     final Context context = this;
+
     Map<String,double[]> ltlng = new HashMap<String, double[]>();
     LatLng vit = new LatLng( 12.840722, 80.153431 );
 
@@ -201,6 +204,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap = googleMap;
 
 
+
         /* Do not REMOVE these comments .....
 
         LatLngBounds.Builder builder = new LatLngBounds.Builder();
@@ -210,7 +214,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         */
         CameraUpdate center=CameraUpdateFactory.newLatLngZoom(vit,16.0f);
-        mMap.addMarker(new MarkerOptions().position(vit).title("VIT Chennai"));
+        mo = new MarkerOptions().position(vit).title("VIT Chennai");
+        mMap.addMarker(mo);
         mMap.moveCamera(center);
 
         //CameraUpdate zoom=CameraUpdateFactory.zoomTo(18);
@@ -219,9 +224,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     public void onMapChange(String s) {
-
+        mMap.clear();
         CameraUpdate center=CameraUpdateFactory.newLatLngZoom(vit,16.0f);
-        mMap.addMarker(new MarkerOptions().position(vit).title(s));
+        mo = new MarkerOptions().position(vit).title(s);
+        mMap.addMarker(mo);
         mMap.moveCamera(center);
 
         //CameraUpdate zoom=CameraUpdateFactory.zoomTo(18);
