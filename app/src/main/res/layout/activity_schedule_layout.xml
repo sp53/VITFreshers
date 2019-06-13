@@ -26,6 +26,17 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Date : 05 June, 2019"
+            android:textColor="#ffff"
+            android:textSize="12sp"
+            android:fontFamily="@font/oxygen_light" />
+
+        <TextView
             android:id="@+id/venue_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
