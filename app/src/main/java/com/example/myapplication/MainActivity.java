@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 dialog.setContentView(R.layout.custom_layout);
 
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 
                 dialog.show();
 
