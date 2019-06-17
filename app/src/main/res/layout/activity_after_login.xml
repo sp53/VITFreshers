@@ -47,6 +47,7 @@
                 android:paddingRight="8dp"
                 android:gravity="center"
                 android:clickable="true"
+                android:onClick="logout"
                 android:textSize="12sp"
                 android:fontFamily="@font/oxygen_light"/>
 
