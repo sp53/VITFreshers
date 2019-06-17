@@ -20,7 +20,39 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="VIT Freshers"
+                android:gravity="center"
+                android:textColor="#ffff"
+                android:fontFamily="@font/oxygen_light"
+                android:textSize="20sp"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="LOGOUT"
+                android:textColor="@color/colorAccent"
+                android:drawableLeft="@drawable/ic_power"
+                android:drawablePadding="4dp"
+                android:layout_alignParentRight="true"
+                android:paddingRight="8dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:textSize="12sp"
+                android:fontFamily="@font/oxygen_light"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
 
     <Button
         android:id="@+id/button4"

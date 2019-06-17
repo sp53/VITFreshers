@@ -27,6 +27,7 @@ public class AfterLoginActivity extends AppCompatActivity {
         toolbar.bringToFront();
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setTitle("VIT Freshers");
 
     }
