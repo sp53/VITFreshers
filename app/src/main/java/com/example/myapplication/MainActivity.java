@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Fill all fields", Toast.LENGTH_LONG).show();
             return;
         }
+        SaveSharedPreference.setUserName(regno);
         Intent intent = new Intent(this, AfterLoginActivity.class);
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);

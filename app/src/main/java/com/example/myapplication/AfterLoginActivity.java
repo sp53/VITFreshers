@@ -11,14 +11,26 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class AfterLoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_login);
+
+
+
+        if(SaveSharedPreference.getUserName() == null)
+        {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            finish();
+        }
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -27,6 +39,9 @@ public class AfterLoginActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setTitle("VIT Freshers");
+
+        TextView tv = findViewById(R.id.textView);
+        tv.setText("Hello, "+SaveSharedPreference.getUserName());
 
     }
 
@@ -79,7 +94,10 @@ public class AfterLoginActivity extends AppCompatActivity {
     }
 
     public void logout(View view) {
-        super.onBackPressed();
+        SaveSharedPreference.logout();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        finish();
     }
 }
