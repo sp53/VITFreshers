@@ -114,6 +114,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AfterLoginActivity.class);
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-        //Log.d("CLICKED", "TRUE");
+        finish();
     }
 }
