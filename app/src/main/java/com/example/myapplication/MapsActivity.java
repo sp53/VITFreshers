@@ -6,8 +6,10 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,6 +27,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.HashMap;
@@ -51,6 +54,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         {
             finish();
         }
+
+        Toast.makeText(MapsActivity.this,"Click the Red Marker for Google Directions.",Toast.LENGTH_LONG).show();
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -112,7 +117,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onClick(View view) {
                         building.setText("Academic Block 1");
                         vit = new LatLng(ltlng.get("ab1")[0],ltlng.get("ab1")[1]);
-                        onMapChange("Academic Block 1");
+                        onMapChange("Academic Block 1",ltlng.get("ab1")[0],ltlng.get("ab1")[1]);
                         bd.dismiss();
                     }
                 });
@@ -122,7 +127,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onClick(View view) {
                         building.setText("Academic Block 2");
                         vit = new LatLng(ltlng.get("ab2")[0],ltlng.get("ab2")[1]);
-                        onMapChange("Academic Block 2");
+                        onMapChange("Academic Block 2",ltlng.get("ab2")[0],ltlng.get("ab2")[1]);
                         bd.dismiss();
                     }
                 });
@@ -132,7 +137,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onClick(View view) {
                         building.setText("Admin Block");
                         vit = new LatLng(ltlng.get("adm")[0],ltlng.get("adm")[1]);
-                        onMapChange("Admin Block");
+                        onMapChange("Admin Block",ltlng.get("adm")[0],ltlng.get("adm")[1]);
                         bd.dismiss();
                     }
                 });
@@ -142,7 +147,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onClick(View view) {
                         building.setText("Library");
                         vit = new LatLng(ltlng.get("lib")[0],ltlng.get("lib")[1]);
-                        onMapChange("Library");
+                        onMapChange("Library",ltlng.get("lib")[0],ltlng.get("lib")[1]);
                         bd.dismiss();
                     }
                 });
@@ -152,7 +157,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onClick(View view) {
                         building.setText("Girls Hostel B Block");
                         vit = new LatLng(ltlng.get("whb")[0],ltlng.get("whb")[1]);
-                        onMapChange("Girls Hostel B Block");
+                        onMapChange("Girls Hostel B Block",ltlng.get("whb")[0],ltlng.get("whb")[1]);
                         bd.dismiss();
                     }
                 });
@@ -162,7 +167,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onClick(View view) {
                         building.setText("Boys Hostel A Block");
                         vit = new LatLng(ltlng.get("mha")[0],ltlng.get("mha")[1]);
-                        onMapChange("Boys Hostel A Block");
+                        onMapChange("Boys Hostel A Block",ltlng.get("mha")[0],ltlng.get("mha")[1]);
                         bd.dismiss();
                     }
                 });
@@ -172,7 +177,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onClick(View view) {
                         building.setText("Boys Hostel B Block");
                         vit = new LatLng(ltlng.get("mhb")[0],ltlng.get("mhb")[1]);
-                        onMapChange("Boys Hostel B Block");
+                        onMapChange("Boys Hostel B Block",ltlng.get("mhb")[0],ltlng.get("mhb")[1]);
                         bd.dismiss();
                     }
                 });
@@ -182,7 +187,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onClick(View view) {
                         building.setText("Boys Hostel C Block");
                         vit = new LatLng(ltlng.get("mhc")[0],ltlng.get("mhc")[1]);
-                        onMapChange("Boys Hostel c Block");
+                        onMapChange("Boys Hostel c Block",ltlng.get("mhc")[0],ltlng.get("mhc")[1]);
                         bd.dismiss();
                     }
                 });
@@ -192,7 +197,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onClick(View view) {
                         building.setText("V-mart");
                         vit = new LatLng(ltlng.get("vmart")[0],ltlng.get("vmart")[1]);
-                        onMapChange("V-mart");
+                        onMapChange("V-mart",ltlng.get("vmart")[0],ltlng.get("vmart")[1]);
                         bd.dismiss();
                     }
                 });
@@ -202,7 +207,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onClick(View view) {
                         building.setText("Indian Bank");
                         vit = new LatLng(ltlng.get("ibank")[0],ltlng.get("ibank")[1]);
-                        onMapChange("Indian Bank");
+                        onMapChange("Indian Bank",ltlng.get("ibank")[0],ltlng.get("ibank")[1]);
                         bd.dismiss();
                     }
                 });
@@ -212,7 +217,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onClick(View view) {
                         building.setText("KVB Bank");
                         vit = new LatLng(ltlng.get("kvb")[0],ltlng.get("kvb")[1]);
-                        onMapChange("KVB Bank");
+                        onMapChange("KVB Bank",ltlng.get("kvb")[0],ltlng.get("kvb")[1]);
                         bd.dismiss();
                     }
                 });
@@ -222,7 +227,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onClick(View view) {
                         building.setText("Gazebo");
                         vit = new LatLng(ltlng.get("gazebo")[0],ltlng.get("gazebo")[1]);
-                        onMapChange("Gazebo");
+                        onMapChange("Gazebo",ltlng.get("gazebo")[0],ltlng.get("gazebo")[1]);
                         bd.dismiss();
                     }
                 });
@@ -232,7 +237,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onClick(View view) {
                         building.setText("CTS - AB1 (1st Floor)");
                         vit = new LatLng(ltlng.get("cts")[0],ltlng.get("cts")[1]);
-                        onMapChange("CTS - AB1 (1st Floor)");
+                        onMapChange("CTS - AB1 (1st Floor)",ltlng.get("cts")[0],ltlng.get("cts")[1]);
                         bd.dismiss();
                     }
                 });
@@ -255,6 +260,17 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker)
+            {
+                Uri mydir = Uri.parse("google.navigation:q=12.840722,80.153431");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, mydir);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+                return true;
+            }
+        });
         /* Do not REMOVE these comments .....
 
         LatLngBounds.Builder builder = new LatLngBounds.Builder();
@@ -265,7 +281,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         */
         CameraUpdate center=CameraUpdateFactory.newLatLngZoom(vit,16.0f);
         mo = new MarkerOptions().position(vit).title("VIT Chennai");
-        mMap.addMarker(mo);
+        Marker m = mMap.addMarker(mo);
+        m.showInfoWindow();
         mMap.moveCamera(center);
 
         //CameraUpdate zoom=CameraUpdateFactory.zoomTo(18);
@@ -273,12 +290,28 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-    public void onMapChange(String s)
+    public void onMapChange(String s ,double lat ,double longi)
     {
-        mMap.clear();
+        //mMap.clear();
+        final String lat_for_direction=""+lat;
+        final String long_for_direction=""+longi;
+
+
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker)
+            {
+                Uri mydir = Uri.parse("google.navigation:q="+lat_for_direction+","+long_for_direction);
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, mydir);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+                return true;
+            }
+        });
         CameraUpdate center=CameraUpdateFactory.newLatLngZoom(vit,16.0f);
         mo = new MarkerOptions().position(vit).title(s);
-        mMap.addMarker(mo);
+        Marker m= mMap.addMarker(mo);
+        m.showInfoWindow();
         mMap.moveCamera(center);
 
     }
