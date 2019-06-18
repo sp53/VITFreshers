@@ -29,27 +29,28 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="VIT Freshers"
-                android:gravity="center"
-                android:textColor="#ffff"
+                android:layout_alignParentLeft="true"
                 android:fontFamily="@font/oxygen_light"
-                android:textSize="20sp"
-                android:layout_alignParentLeft="true" />
+                android:gravity="center"
+                android:text="VIT Freshers"
+                android:textColor="#ffff"
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="LOGOUT"
-                android:textColor="@color/colorAccent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="9dp"
+                android:clickable="true"
                 android:drawableLeft="@drawable/ic_power"
                 android:drawablePadding="4dp"
-                android:layout_alignParentRight="true"
-                android:paddingRight="8dp"
+                android:fontFamily="@font/oxygen_light"
                 android:gravity="center"
-                android:clickable="true"
                 android:onClick="logout"
-                android:textSize="12sp"
-                android:fontFamily="@font/oxygen_light"/>
+                android:paddingRight="8dp"
+                android:text="LOGOUT"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
 
         </RelativeLayout>
 
