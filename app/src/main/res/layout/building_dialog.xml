@@ -137,6 +137,54 @@
                 android:text="Vmart"
                 android:textColor="#ffff"
                 android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ibank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="15dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="Indian Bank"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/kvb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="15dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="KVB Bank"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/gazebo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="15dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="Gazebo"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/cts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="15dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="CTS - AB1 (1st Floor)"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
         </LinearLayout>
 
     </ScrollView>

@@ -86,7 +86,7 @@
         android:focusableInTouchMode="false"
         android:fontFamily="@font/oxygen_light"
         android:hint="Departement"
-        android:inputType="textCapCharacters"
+        android:inputType="textNoSuggestions"
         android:maxLines="1"
         android:padding="18dp"
         android:scrollHorizontally="true"

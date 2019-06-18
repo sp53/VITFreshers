@@ -64,6 +64,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         ltlng.put("mhb",new double[] {12.841902, 80.157393});
         ltlng.put("mhc",new double[] {12.843047, 80.157417});
         ltlng.put("vmart",new double[] {12.844885, 80.153866});
+        ltlng.put("ibank",new double[] {12.844658, 80.153718});
+        ltlng.put("kvb",new double[] {12.841593, 80.156613});
+        ltlng.put("gazebo",new double[] {12.841828, 80.154360});
+        ltlng.put("cts",new double[] {12.843756, 80.153671});
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -98,6 +102,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 TextView mhb=bd.findViewById(R.id.MHB);
                 TextView mhc=bd.findViewById(R.id.MHC);
                 TextView vmart=bd.findViewById(R.id.vmart);
+                TextView ibank=bd.findViewById(R.id.ibank);
+                TextView kvb=bd.findViewById(R.id.kvb);
+                TextView gazebo=bd.findViewById(R.id.gazebo);
+                TextView cts=bd.findViewById(R.id.cts);
 
                 ab1.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -172,7 +180,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 mhc.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        building.setText("Boys Hostel c Block");
+                        building.setText("Boys Hostel C Block");
                         vit = new LatLng(ltlng.get("mhc")[0],ltlng.get("mhc")[1]);
                         onMapChange("Boys Hostel c Block");
                         bd.dismiss();
@@ -185,6 +193,46 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                         building.setText("V-mart");
                         vit = new LatLng(ltlng.get("vmart")[0],ltlng.get("vmart")[1]);
                         onMapChange("V-mart");
+                        bd.dismiss();
+                    }
+                });
+
+                ibank.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        building.setText("Indian Bank");
+                        vit = new LatLng(ltlng.get("ibank")[0],ltlng.get("ibank")[1]);
+                        onMapChange("Indian Bank");
+                        bd.dismiss();
+                    }
+                });
+
+                kvb.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        building.setText("KVB Bank");
+                        vit = new LatLng(ltlng.get("kvb")[0],ltlng.get("kvb")[1]);
+                        onMapChange("KVB Bank");
+                        bd.dismiss();
+                    }
+                });
+
+                gazebo.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        building.setText("Gazebo");
+                        vit = new LatLng(ltlng.get("gazebo")[0],ltlng.get("gazebo")[1]);
+                        onMapChange("Gazebo");
+                        bd.dismiss();
+                    }
+                });
+
+                cts.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        building.setText("CTS - AB1 (1st Floor)");
+                        vit = new LatLng(ltlng.get("cts")[0],ltlng.get("cts")[1]);
+                        onMapChange("CTS - AB1 (1st Floor)");
                         bd.dismiss();
                     }
                 });
@@ -225,8 +273,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-    public void onMapChange(String s) {
-        //mMap.clear();
+    public void onMapChange(String s)
+    {
+        mMap.clear();
         CameraUpdate center=CameraUpdateFactory.newLatLngZoom(vit,16.0f);
         mo = new MarkerOptions().position(vit).title(s);
         mMap.addMarker(mo);
