@@ -18,6 +18,7 @@
         android:background="@drawable/proctor_dialog_button" />
 
     <TextView
+        android:id="@+id/procName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
@@ -77,6 +78,7 @@
         android:textSize="16sp"
         android:fontFamily="@font/oxygen_light" />
     <TextView
+        android:id="@+id/procRoom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
