@@ -214,7 +214,14 @@ public class MainActivity extends AppCompatActivity {
                     pb.setVisibility(View.INVISIBLE);
                     return;
                 }
-                SaveSharedPreference.setUserName(regno);
+
+                String ProctorName = jo.getString("Proctor");
+                String ProctorRoom = jo.getString("ProcVenue");
+
+                SaveSharedPreference.setField("CurrentUser",regno);
+                SaveSharedPreference.setField("CurrentUserProcName",ProctorName);
+                SaveSharedPreference.setField("CurrentUserProcRoom",ProctorRoom);
+
                 Intent intent = new Intent(getApplicationContext(), AfterLoginActivity.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);

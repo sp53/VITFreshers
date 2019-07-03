@@ -15,20 +15,22 @@ public class SaveSharedPreference
         ed = p.edit();
     }
 
-    public static void setUserName(String userName)
+    public static void setField(String key,String value)
     {
-        ed.putString("Current", userName);
+        ed.putString(key, value);
         ed.commit();
     }
 
-    public static String getUserName()
+    public static String getField(String s)
     {
-        return p.getString("Current",null);
+        return p.getString(s,null);
     }
 
     public static void logout()
     {
-        ed.remove("Current");
+        ed.remove("CurrentUser");
+        ed.remove("CurrentUserProcName");
+        ed.remove("CurrentUserProcRoom");
         ed.clear();
         ed.commit();
     }
