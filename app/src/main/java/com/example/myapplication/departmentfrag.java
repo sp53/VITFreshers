@@ -1,13 +1,10 @@
 package com.example.myapplication;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-
 import androidx.fragment.app.Fragment;
-
 import java.util.ArrayList;
 
 public class departmentfrag extends Fragment implements FragmentSwipeInterface{
@@ -15,6 +12,12 @@ public class departmentfrag extends Fragment implements FragmentSwipeInterface{
     private ArrayList<Schedule> scheduleArrayList;
     private ListView listView;
     View vhold;
+    dptScheduleData objec;
+
+    public departmentfrag(dptScheduleData obj)
+    {
+        objec=obj;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -24,8 +27,8 @@ public class departmentfrag extends Fragment implements FragmentSwipeInterface{
 
         scheduleArrayList = new ArrayList<>();
         // For Testing
-        for (int i = 0; i < 10; i++) {
-            scheduleArrayList.add(new Schedule());
+        for (int i = 0; i < objec.length; i++) {
+            scheduleArrayList.add(new Schedule(objec.name[i],objec.venue[i],objec.time[i],objec.date[i]));
         }
 
         listView = vhold.findViewById(R.id.schedule_listview_department);
@@ -43,8 +46,8 @@ public class departmentfrag extends Fragment implements FragmentSwipeInterface{
 
         scheduleArrayList = new ArrayList<>();
         // For Testing
-        for (int i = 0; i < 10; i++) {
-            scheduleArrayList.add(new Schedule());
+        for (int i = 0; i < objec.length; i++) {
+            scheduleArrayList.add(new Schedule(objec.name[i],objec.venue[i],objec.time[i],objec.date[i]));
         }
 
         listView = vhold.findViewById(R.id.schedule_listview_department);

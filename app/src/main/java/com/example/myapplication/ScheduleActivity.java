@@ -1,8 +1,12 @@
 package com.example.myapplication;
 
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -12,17 +16,31 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class ScheduleActivity extends AppCompatActivity {
     SectionPageAdapter adapter;
     SectionPageAdapter spa;
     ViewPager mviewpager;
+    dptScheduleData obj;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
+
+        obj=new dptScheduleData();
+        obj.fetchData();
 
         Toolbar toolbar = findViewById(R.id.toolbar_schedule_activity);
         setSupportActionBar(toolbar);
@@ -64,7 +82,7 @@ public class ScheduleActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager vp)
     {
         adapter.addFragment(new collegefrag(),"College");
-        adapter.addFragment(new departmentfrag(),"Department");
+        adapter.addFragment(new departmentfrag(obj),"Department");
         vp.setAdapter(adapter);
     }
 
@@ -83,4 +101,6 @@ public class ScheduleActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }
