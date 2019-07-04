@@ -1,6 +1,9 @@
 package com.vitfreshers.myapplication;
 
 import android.os.AsyncTask;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,26 +33,70 @@ public class dptScheduleData
     JSONArray jsarray;
     String indata="";
     String u="";
+    ViewGroup vg;
 
-    public void fetchData(int i)
+
+
+    public void fetchData(int i, ViewGroup v)
     {
+        vg=v;
         if(i==1)
         {
             u="https://vitappapi.herokuapp.com/schedule.php?reg="+SaveSharedPreference.getField("CurrentUser");
+
         }
         else
         {
             u="http://vitappapi.herokuapp.com/induction.php";
+
         }
 
         getJSON();
     }
 
     // json data
-    public void getJSON()
-    {
+    public void getJSON() {
 
-        new BackgroundTask().execute();
+        String s="";
+        try{
+            s=new BackgroundTask().execute().get();
+        }
+        catch (Exception e)
+        {
+
+        }
+
+        indata=s;
+
+
+        try {
+            jsobject = new JSONObject(indata);
+            JSONObject jo;
+
+
+            jsarray = jsobject.getJSONArray("Schedule");
+            length=jsarray.length();
+            name=new String[length];
+            time=new String[length];
+            date=new String[length];
+            venue=new String[length];
+            person=new String[length];
+
+            for(int i=0;i<length;i++)
+            {
+                jo = jsarray.getJSONObject(i);
+                name[i]= jo.getString("Name");
+                date[i] = jo.getString("Date");
+                time[i] = jo.getString("Time");
+                venue[i] = jo.getString("Venue");
+                person[i] = jo.getString("ResPer");
+            }
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
 
     }
     class BackgroundTask extends AsyncTask<Void,Void,String>
@@ -120,7 +167,6 @@ public class dptScheduleData
                     venue[i] = jo.getString("Venue");
                     person[i] = jo.getString("ResPer");
                 }
-
 
 
             } catch (JSONException e) {

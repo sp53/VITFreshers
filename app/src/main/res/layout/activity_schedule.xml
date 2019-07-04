@@ -22,6 +22,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
@@ -32,14 +33,28 @@
 
     </com.google.android.material.tabs.TabLayout>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/container"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="10dp"
-        android:layout_marginBottom="8dp">
+        android:layout_height="match_parent">
 
-    </androidx.viewpager.widget.ViewPager>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp"
+            android:layout_marginBottom="8dp">
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <TextView
+            android:id="@+id/pbSchedule"
+            android:layout_width="104dp"
+            android:layout_height="38dp"
+            android:layout_centerInParent="true"
+            android:text="Loading ..."
+            android:textSize="20dp"
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
 
 
 </LinearLayout>
