@@ -15,15 +15,19 @@ public class ScheduleActivity extends AppCompatActivity {
     SectionPageAdapter adapter;
     SectionPageAdapter spa;
     ViewPager mviewpager;
-    dptScheduleData obj;
+    dptScheduleData objd;
+    dptScheduleData objc;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
 
-        obj=new dptScheduleData();
-        obj.fetchData();
+        objd=new dptScheduleData();
+        objd.fetchData(1);
+
+        objc=new dptScheduleData();
+        objc.fetchData(0);
 
         Toolbar toolbar = findViewById(R.id.toolbar_schedule_activity);
         setSupportActionBar(toolbar);
@@ -64,8 +68,8 @@ public class ScheduleActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager vp)
     {
-        adapter.addFragment(new collegefrag(),"College");
-        adapter.addFragment(new departmentfrag(obj),"Department");
+        adapter.addFragment(new collegefrag(objc),"College");
+        adapter.addFragment(new departmentfrag(objd),"Department");
         vp.setAdapter(adapter);
     }
 

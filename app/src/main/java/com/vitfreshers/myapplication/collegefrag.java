@@ -15,6 +15,12 @@ public class collegefrag extends Fragment implements FragmentSwipeInterface{
     private ArrayList<Schedule> scheduleArrayList;
     private ListView listView;
     View vhold;
+    dptScheduleData objec;
+
+    public collegefrag(dptScheduleData obj)
+    {
+        objec=obj;
+    }
 
 
     @Override
@@ -25,8 +31,8 @@ public class collegefrag extends Fragment implements FragmentSwipeInterface{
 
         scheduleArrayList = new ArrayList<>();
         // For Testing
-        for (int i = 0; i < 10; i++) {
-            scheduleArrayList.add(new Schedule());
+        for (int i = 0; i < objec.length; i++) {
+            scheduleArrayList.add(new Schedule(objec.name[i],objec.venue[i],objec.time[i],objec.date[i],objec.person[i]));
         }
 
         listView = vhold.findViewById(R.id.schedule_listview_college);
@@ -40,8 +46,8 @@ public class collegefrag extends Fragment implements FragmentSwipeInterface{
 
         scheduleArrayList = new ArrayList<>();
         // For Testing
-        for (int i = 0; i < 10; i++) {
-            scheduleArrayList.add(new Schedule());
+        for (int i = 0; i < objec.length; i++) {
+            scheduleArrayList.add(new Schedule(objec.name[i],objec.venue[i],objec.time[i],objec.date[i],objec.person[i]));
         }
 
         listView = vhold.findViewById(R.id.schedule_listview_college);

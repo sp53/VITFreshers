@@ -28,7 +28,7 @@ public class departmentfrag extends Fragment implements FragmentSwipeInterface{
         scheduleArrayList = new ArrayList<>();
         // For Testing
         for (int i = 0; i < objec.length; i++) {
-            scheduleArrayList.add(new Schedule(objec.name[i],objec.venue[i],objec.time[i],objec.date[i]));
+            scheduleArrayList.add(new Schedule(objec.name[i],objec.venue[i],objec.time[i],objec.date[i],objec.person[i]));
         }
 
         listView = vhold.findViewById(R.id.schedule_listview_department);
@@ -47,7 +47,7 @@ public class departmentfrag extends Fragment implements FragmentSwipeInterface{
         scheduleArrayList = new ArrayList<>();
         // For Testing
         for (int i = 0; i < objec.length; i++) {
-            scheduleArrayList.add(new Schedule(objec.name[i],objec.venue[i],objec.time[i],objec.date[i]));
+            scheduleArrayList.add(new Schedule(objec.name[i],objec.venue[i],objec.time[i],objec.date[i],objec.person[i]));
         }
 
         listView = vhold.findViewById(R.id.schedule_listview_department);

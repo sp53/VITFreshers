@@ -20,6 +20,7 @@ public class dptScheduleData
     public  String date[];
     public  String time[];
     public  String venue[];
+    public  String person[];
 
 
 
@@ -28,9 +29,19 @@ public class dptScheduleData
     JSONObject jsobject;
     JSONArray jsarray;
     String indata="";
+    String u="";
 
-    public void fetchData()
+    public void fetchData(int i)
     {
+        if(i==1)
+        {
+            u="https://vitappapi.herokuapp.com/schedule.php?reg="+SaveSharedPreference.getField("CurrentUser");
+        }
+        else
+        {
+            u="http://vitappapi.herokuapp.com/induction.php";
+        }
+
         getJSON();
     }
 
@@ -47,7 +58,7 @@ public class dptScheduleData
         @Override
         protected void onPreExecute() {
 
-            String u="https://vitappapi.herokuapp.com/schedule.php?reg="+SaveSharedPreference.getField("CurrentUser");
+
             json_url=u;
         }
 
@@ -98,6 +109,7 @@ public class dptScheduleData
                 time=new String[length];
                 date=new String[length];
                 venue=new String[length];
+                person=new String[length];
 
                 for(int i=0;i<length;i++)
                 {
@@ -106,6 +118,7 @@ public class dptScheduleData
                     date[i] = jo.getString("Date");
                     time[i] = jo.getString("Time");
                     venue[i] = jo.getString("Venue");
+                    person[i] = jo.getString("ResPer");
                 }
 
 
