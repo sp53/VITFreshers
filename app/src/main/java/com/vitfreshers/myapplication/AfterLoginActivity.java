@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.vitfreshers.myapplication;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;

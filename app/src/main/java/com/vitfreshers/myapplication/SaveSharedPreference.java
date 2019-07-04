@@ -1,8 +1,7 @@
-package com.example.myapplication;
+package com.vitfreshers.myapplication;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 
 public class SaveSharedPreference
 {

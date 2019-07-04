@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication">
+    package="com.vitfreshers.myapplication">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -34,10 +34,10 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name="com.vitfreshers.myapplication.MapsActivity"
             android:label="@string/title_activity_maps"></activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".SplashScreen">
+        <activity android:name="com.vitfreshers.myapplication.MainActivity" />
+        <activity android:name="com.vitfreshers.myapplication.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,18 +45,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AfterLoginActivity"
-            android:parentActivityName=".MainActivity">
+            android:name="com.vitfreshers.myapplication.AfterLoginActivity"
+            android:parentActivityName="com.vitfreshers.myapplication.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.vitfreshers.myapplication.MainActivity" />
         </activity>
         <activity
-            android:name=".ScheduleActivity"
-            android:parentActivityName=".AfterLoginActivity">
+            android:name="com.vitfreshers.myapplication.ScheduleActivity"
+            android:parentActivityName="com.vitfreshers.myapplication.AfterLoginActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".AfterLoginActivity" />
+                android:value="com.vitfreshers.myapplication.AfterLoginActivity" />
         </activity>
     </application>
 

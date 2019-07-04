@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.vitfreshers.myapplication;
 
 import android.content.Context;
 

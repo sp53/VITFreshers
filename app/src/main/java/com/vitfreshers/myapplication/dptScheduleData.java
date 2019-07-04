@@ -1,7 +1,6 @@
-package com.example.myapplication;
+package com.vitfreshers.myapplication;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;

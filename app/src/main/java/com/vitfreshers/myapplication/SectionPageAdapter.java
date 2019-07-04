@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.vitfreshers.myapplication;
 
 
 import androidx.annotation.Nullable;

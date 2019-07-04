@@ -68,7 +68,7 @@
         map:layout_constraintEnd_toEndOf="parent"
         map:layout_constraintStart_toStartOf="parent"
         map:layout_constraintTop_toBottomOf="@+id/building"
-        tools:context="com.example.styledmap.MapsActivityString" />
+        tools:context="com.vitfreshers.styledmap.MapsActivityString" />
 
     <TextView
         android:id="@+id/textView2"
