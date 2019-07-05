@@ -55,7 +55,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             finish();
         }
 
-        //Toast.makeText(MapsActivity.this,"Click the Red Marker for Google Directions.",Toast.LENGTH_LONG).show();
+        if(!CheckNetwork.isInternetAvailable(this)) //returns true if internet available
+        {
+            Toast.makeText(this, "Please open your Internet Connection", Toast.LENGTH_LONG).show();
+
+        }
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 

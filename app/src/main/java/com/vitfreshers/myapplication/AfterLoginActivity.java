@@ -12,6 +12,7 @@ import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class AfterLoginActivity extends AppCompatActivity {
@@ -48,12 +49,20 @@ public class AfterLoginActivity extends AppCompatActivity {
     }
 
     public void open_schedule_activity(View view) {
+
+        if(!CheckNetwork.isInternetAvailable(this)) //returns true if internet available
+        {
+            Toast.makeText(this, "Please open your Internet Connection", Toast.LENGTH_LONG).show();
+            return;
+        }
+
         Intent intent = new Intent(this, ScheduleActivity.class);
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void open_maps(View view) {
+
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
