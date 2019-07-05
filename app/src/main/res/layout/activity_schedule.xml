@@ -28,8 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:tabTextColor="#fff"
-        app:tabTextAppearance="@style/MyCustomTabText"
-        >
+        app:tabTextAppearance="@style/MyCustomTabText" >
 
     </com.google.android.material.tabs.TabLayout>
 
@@ -48,8 +47,8 @@
 
         <TextView
             android:id="@+id/pbSchedule"
-            android:layout_width="104dp"
-            android:layout_height="38dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Loading ..."
             android:textSize="20dp"

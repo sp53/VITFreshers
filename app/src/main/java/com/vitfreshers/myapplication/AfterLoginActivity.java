@@ -110,4 +110,10 @@ public class AfterLoginActivity extends AppCompatActivity {
         finish();
     }
 
+    public void open_anti_ragging_activity(View view) {
+        Intent intent = new Intent(this, AntiRaggingActivity.class);
+        startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        finish();
+    }
 }

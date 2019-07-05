@@ -74,7 +74,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         ltlng.put("gazebo",new double[] {12.841828, 80.154360});
         ltlng.put("cts",new double[] {12.843756, 80.153671});
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar_maps);
         setSupportActionBar(toolbar);
         toolbar.bringToFront();
         ActionBar actionBar = getSupportActionBar();
