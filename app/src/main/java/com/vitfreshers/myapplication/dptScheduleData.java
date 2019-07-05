@@ -119,10 +119,10 @@ public class dptScheduleData
             {
                 jo = jsarray.getJSONObject(i);
                 name[i]= jo.getString("Name");
-                date[i] = jo.getString("Date");
-                time[i] = jo.getString("Time");
-                venue[i] = jo.getString("Venue");
-                person[i] = jo.getString("ResPer");
+                date[i] = "DATE : "+jo.getString("Date");
+                time[i] = "TIME : "+jo.getString("Time");
+                venue[i] = "VENUE : "+jo.getString("Venue");
+                person[i] = "SPEAKER : "+jo.getString("ResPer");
             }
 
 
