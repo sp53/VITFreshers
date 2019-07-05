@@ -42,40 +42,10 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/anti_ragging_committee_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/oxygen_mono"
-                    android:text="Anti-Ragging Committee"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:background="@drawable/anti_ragging_line" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/anti_ragging_committee_list"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-
-
-            <LinearLayout
                 android:id="@+id/school_level_members_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="42dp"
+                android:paddingTop="4dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -86,16 +56,46 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="20sp" />
 
-                <TextView
+                <!--TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:background="@drawable/anti_ragging_line" />
+                    android:background="@drawable/anti_ragging_line" /-->
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/anti_ragging_counsellor_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/anti_ragging_committee_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oxygen_mono"
+                    android:text="Anti-Ragging Committee"
+                    android:paddingTop="42dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp" />
+
+                <!--TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/anti_ragging_line" /-->
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/anti_ragging_committee_list"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
