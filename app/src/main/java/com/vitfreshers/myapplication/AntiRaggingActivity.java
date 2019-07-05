@@ -31,7 +31,12 @@ public class AntiRaggingActivity extends AppCompatActivity {
             {"Mr. Mathivanan", "CSO", "Admin", "mathivanan.v@vit.ac.in", "9443442902"}
     };
 
-    private LinearLayout list1;
+    private String[][] counsellor_list = {
+            {"Ms. Bhuvaneswari S", "Student Counselor", "Administration", "bhuvaneswari.s@vit.ac.in", "9791142617"},
+            {"Dr. Maya Rathnasabapathy", "Asst. Prof. (Sr.), Asst. Director, Library", "Psychology", "maya.r@vit.ac.in", "9444333030"}
+    };
+
+    private LinearLayout list1, linearLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +87,58 @@ public class AntiRaggingActivity extends AppCompatActivity {
 
             list1.addView(view);
         }
+
+
+        linearLayout = findViewById(R.id.anti_ragging_counsellor_list);
+
+        for(int i=0; i<counsellor_list.length; i++) {
+            View view = this.getLayoutInflater().inflate(R.layout.anti_ragging_cards, null);
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.MATCH_PARENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT
+            );
+            int top = 16, bottom = 16, right = 4, left = 4;
+            params.setMargins(left, top, right, bottom);
+            view.setLayoutParams(params);
+
+            TextView name = view.findViewById(R.id.name_anti_ragging);
+            TextView designation = view.findViewById(R.id.designation_anti_ragging);
+            TextView school = view.findViewById(R.id.school_anti_ragging);
+            TextView email = view.findViewById(R.id.email_anti_ragging);
+
+            name.setText("NAME: "+counsellor_list[i][0]);
+            designation.setText("DESIGNATION: "+counsellor_list[i][1]);
+            school.setText("SCHOOL: "+counsellor_list[i][2]);
+            email.setText("EMAIL: "+counsellor_list[i][3]);
+
+            final String mobNo = counsellor_list[i][4];
+
+            Button call = view.findViewById(R.id.call_anti_ragging);
+
+            call.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Intent.ACTION_CALL);
+                    intent.setData(Uri.parse("tel:" + mobNo));
+                    if (ContextCompat.checkSelfPermission(AntiRaggingActivity.this,
+                            Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                        ActivityCompat.requestPermissions(AntiRaggingActivity.this,
+                                new String[]{Manifest.permission.CALL_PHONE},1);
+                    }
+                    else
+                    {
+                        startActivity(intent);
+                    }
+                }
+            });
+
+            linearLayout.addView(view);
+        }
+
+
     }
+
+
 
 
     @Override

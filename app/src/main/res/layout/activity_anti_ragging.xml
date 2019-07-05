@@ -29,7 +29,6 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +51,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/oxygen_mono"
-                    android:text="Anti-Ragging Committee "
+                    android:text="Anti-Ragging Committee"
                     android:textColor="@color/colorAccent"
                     android:textSize="20sp" />
 
@@ -76,13 +75,14 @@
                 android:id="@+id/school_level_members_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="42dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/oxygen_mono"
-                    android:text="School Level Members "
+                    android:text="Student Counsellors Details"
                     android:textColor="@color/colorAccent"
                     android:textSize="20sp" />
 
@@ -93,6 +93,12 @@
                     android:background="@drawable/anti_ragging_line" />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/anti_ragging_counsellor_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
 
 
         </LinearLayout>

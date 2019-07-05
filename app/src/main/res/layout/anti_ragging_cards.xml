@@ -79,9 +79,9 @@ android:orientation="horizontal">
         android:id="@+id/call_anti_ragging"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginRight="5dp"
         android:background="@drawable/circle"
         android:drawableTop="@drawable/ic_call_white_24dp"
+        android:layout_marginRight="8dp"
         android:paddingTop="8dp" />
 
 </LinearLayout>
