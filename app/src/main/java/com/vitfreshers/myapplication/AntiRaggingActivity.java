@@ -24,6 +24,7 @@ public class AntiRaggingActivity extends AppCompatActivity {
         actionBar.setTitle("VIT Freshers");
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
