@@ -7,4 +7,6 @@
     <color name="colorAccentLight">#33adff</color>
     <color name="colorAccentLighter">#4db8ff</color>
     <color name="custom_line_color">#607385</color>
+    <color name="white">#ffffff</color>
+    <color name="green">#47d147</color>
 </resources>

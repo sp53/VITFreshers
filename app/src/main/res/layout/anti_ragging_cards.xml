@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="@drawable/anti_ragging_information_styler"
+android:orientation="horizontal">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_alignParentLeft="true"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingLeft="16dp"
+    android:paddingStart="16sp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/name_anti_ragging"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/oxygen_light"
+        android:gravity="left"
+        android:padding="2dp"
+        android:text="NAME: Dr. Premalatha L"
+        android:textColor="#ffff"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/designation_anti_ragging"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/oxygen_light"
+        android:gravity="left"
+        android:padding="2dp"
+        android:text="DESIGNATION: Professor"
+        android:textColor="#ffff"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/school_anti_ragging"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/oxygen_light"
+        android:gravity="left"
+        android:padding="2dp"
+        android:text="SCHOOL: SELECT"
+        android:textColor="#ffff"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/email_anti_ragging"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/oxygen_light"
+        android:gravity="left"
+        android:padding="2dp"
+        android:text="EMAIL: premalatha.l@vit.ac.in"
+        android:textColor="#ffff"
+        android:textSize="13sp" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    android:paddingRight="8dp">
+
+    <Button
+        android:id="@+id/call_anti_ragging"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circle"
+        android:drawableTop="@drawable/ic_call_white_24dp"
+        android:paddingTop="8dp" />
+
+</LinearLayout>
+
+</RelativeLayout>
