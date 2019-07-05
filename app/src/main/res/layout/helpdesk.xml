@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/helpdesk_bkg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oxygen_light"
+        android:gravity="center"
+        android:text="Location of Help Desks"
+        android:padding="12dp"
+        android:background="@drawable/proctor_dialog_button"
+        android:textColor="#ffff"
+        android:textSize="18sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp">
+    <ImageView
+        android:layout_margin="5dp"
+        android:background="@drawable/custom_layout_styler"
+        app:srcCompat="@drawable/desks"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

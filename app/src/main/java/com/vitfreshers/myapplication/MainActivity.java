@@ -150,6 +150,23 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+
+        TextView hpdsk = findViewById(R.id.hdesk);
+
+        hpdsk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                final Dialog dialog2 = new Dialog(context);
+                dialog2.setContentView(R.layout.helpdesk);
+
+                dialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog2.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+                dialog2.show();
+
+            }
+        });
     }
 
     public void login(View view) {

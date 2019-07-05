@@ -147,4 +147,23 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         android:visibility="invisible"/>
 
+    <TextView
+        android:id="@+id/hdesk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/helpdesk"
+        android:textColor="#ffff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.459" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
