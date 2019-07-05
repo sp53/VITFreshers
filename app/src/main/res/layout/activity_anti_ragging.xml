@@ -29,6 +29,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/oxygen_mono"
-                    android:text="ANTI RAGGING COMMITTEE"
+                    android:text="Anti-Ragging Committee "
                     android:textColor="@color/colorAccent"
                     android:textSize="20sp" />
 
@@ -81,7 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/oxygen_mono"
-                    android:text="SCHOOL LEVEL MEMBERS"
+                    android:text="School Level Members "
                     android:textColor="@color/colorAccent"
                     android:textSize="20sp" />
 

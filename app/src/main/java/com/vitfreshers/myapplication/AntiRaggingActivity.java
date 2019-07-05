@@ -52,7 +52,7 @@ public class AntiRaggingActivity extends AppCompatActivity {
                     RelativeLayout.LayoutParams.MATCH_PARENT,
                     RelativeLayout.LayoutParams.WRAP_CONTENT
             );
-            int top = 16, bottom = 16, right = 4, left = 4;
+            int top = 16, bottom = 16, right = 16, left = 4;
             params.setMargins(left, top, right, bottom);
             view.setLayoutParams(params);
 
@@ -73,17 +73,10 @@ public class AntiRaggingActivity extends AppCompatActivity {
             call.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(Intent.ACTION_CALL);
+                    Intent intent = new Intent(Intent.ACTION_DIAL);
                     intent.setData(Uri.parse("tel:" + mobNo));
-                    if (ContextCompat.checkSelfPermission(AntiRaggingActivity.this,
-                            Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        ActivityCompat.requestPermissions(AntiRaggingActivity.this,
-                                new String[]{Manifest.permission.CALL_PHONE},1);
-                    }
-                    else
-                    {
-                        startActivity(intent);
-                    }
+                    startActivity(intent);
+
                 }
             });
 

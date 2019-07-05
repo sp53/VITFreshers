@@ -60,7 +60,7 @@
         android:drawablePadding="10dp"
         android:fontFamily="@font/oxygen_light"
         android:hint="Application Number"
-        android:inputType="number"
+        android:inputType="textCapCharacters"
         android:maxLines="1"
         android:padding="18dp"
         android:scrollHorizontally="true"
