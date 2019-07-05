@@ -42,7 +42,40 @@ public class dptScheduleData
         vg=v;
         if(i==1)
         {
-            u="https://vitappapi.herokuapp.com/schedule.php?reg="+SaveSharedPreference.getField("CurrentUser");
+            u="http://vitappapi.herokuapp.com/schedule.php?brnch=";
+            switch(SaveSharedPreference.getField("CurrentUserDep"))
+            {
+                case "B.Tech CSE":
+                    u=u+"BCE";
+                    break;
+                case "B.Tech CSE (Cyber)":
+                    u=u+"BCE";
+                    break;
+                case "B.Tech CSE (A.I.)":
+                    u=u+"BCE";
+                    break;
+                case "B.Tech EEE":
+                    u=u+"BEE";
+                    break;
+                case "B.Tech ECE":
+                    u=u+"BEC";
+                    break;
+                case "B.Tech ECM":
+                    u=u+"BLC";
+                    break;
+                case "B.Tech Civil":
+                    u=u+"BCL";
+                    break;
+                case "B.Tech Mechanical":
+                    u=u+"BME";
+                    break;
+                case "MBA":
+                    u=u+"MBA";
+                    break;
+                default:
+                    u=u+"BCE";
+                    break;
+            }
 
         }
         else
