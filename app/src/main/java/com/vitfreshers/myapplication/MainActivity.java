@@ -203,7 +203,40 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
 
-            String u="https://vitappapi.herokuapp.com/?reg="+regno;
+            String u="http://vitappapi.herokuapp.com/index.php?app="+regno+"&brnch=";
+            switch(dep)
+            {
+                case "B.Tech CSE":
+                    u=u+"BCE";
+                    break;
+                case "B.Tech CSE (Cyber)":
+                    u=u+"BCE";
+                    break;
+                case "B.Tech CSE (A.I.)":
+                    u=u+"BCE";
+                    break;
+                case "B.Tech EEE":
+                    u=u+"BEE";
+                    break;
+                case "B.Tech ECE":
+                    u=u+"BEC";
+                    break;
+                case "B.Tech ECM":
+                    u=u+"BLC";
+                    break;
+                case "B.Tech Civil":
+                    u=u+"BCL";
+                    break;
+                case "B.Tech Mechanical":
+                    u=u+"BME";
+                    break;
+                case "MBA":
+                    u=u+"MBA";
+                    break;
+                default:
+                    u=u+"BCE";
+                    break;
+            }
             json_url=u;
         }
 
@@ -254,17 +287,25 @@ public class MainActivity extends AppCompatActivity {
                 regnoStatus = jo.getString("Status");
 
                 if(regnoStatus.equals("No")) {
-                    Toast.makeText(getApplicationContext(), "Invalid Registration Number", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Invalid Credentials", Toast.LENGTH_LONG).show();
                     pb.setVisibility(View.INVISIBLE);
                     return;
                 }
 
                 String ProctorName = jo.getString("Proctor");
                 String ProctorRoom = jo.getString("ProcVenue");
+                String ProctorMob = jo.getString("ProcMob");
+                String ProctorEmail = jo.getString("ProcEmail");
+                String ProcMeet = jo.getString("MeetingVenue");
+                String studentName = jo.getString("Name");
 
                 SaveSharedPreference.setField("CurrentUser",regno);
+                SaveSharedPreference.setField("CurrentUserName",studentName);
                 SaveSharedPreference.setField("CurrentUserProcName",ProctorName);
                 SaveSharedPreference.setField("CurrentUserProcRoom",ProctorRoom);
+                SaveSharedPreference.setField("CurrentUserProcMob",ProctorMob);
+                SaveSharedPreference.setField("CurrentUserProcEmail",ProctorEmail);
+                SaveSharedPreference.setField("CurrentUserProcMeet",ProcMeet);
                 SaveSharedPreference.setField("CurrentUserDep",dep);
 
                 Intent intent = new Intent(getApplicationContext(), AfterLoginActivity.class);

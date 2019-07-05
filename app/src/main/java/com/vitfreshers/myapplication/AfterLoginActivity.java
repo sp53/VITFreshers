@@ -42,7 +42,7 @@ public class AfterLoginActivity extends AppCompatActivity {
         actionBar.setTitle("VIT Freshers");
 
         TextView tv = findViewById(R.id.textView);
-        tv.setText("Hello, "+SaveSharedPreference.getField("CurrentUser"));
+        tv.setText("Hello, "+SaveSharedPreference.getField("CurrentUserName"));
 
 
     }
@@ -70,6 +70,12 @@ public class AfterLoginActivity extends AppCompatActivity {
         tv1.setText("Name : "+SaveSharedPreference.getField("CurrentUserProcName"));
         TextView tv2=dialog.findViewById(R.id.procRoom);
         tv2.setText("Room No. : "+SaveSharedPreference.getField("CurrentUserProcRoom"));
+        TextView tv3=dialog.findViewById(R.id.procMob);
+        tv3.setText("Mobile No. : "+SaveSharedPreference.getField("CurrentUserProcMob"));
+        TextView tv4=dialog.findViewById(R.id.procEmail);
+        tv4.setText("Email Id : "+SaveSharedPreference.getField("CurrentUserProcEmail"));
+        TextView tv5=dialog.findViewById(R.id.meet);
+        tv5.setText("Meeting Venue : "+SaveSharedPreference.getField("CurrentUserProcMeet"));
 
         dialog.show();
 

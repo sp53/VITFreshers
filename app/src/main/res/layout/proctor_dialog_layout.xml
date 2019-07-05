@@ -31,30 +31,21 @@
         android:fontFamily="@font/oxygen_light" />
 
     <TextView
+        android:id="@+id/procRoom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:gravity="center"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:text="Designation : Professor"
+        android:paddingBottom="15dp"
+        android:text="Room No. : AB1 - 202"
         android:textColor="#ffff"
         android:textSize="16sp"
         android:fontFamily="@font/oxygen_light" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:gravity="center"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:text="School : SCSE"
-        android:textColor="#ffff"
-        android:textSize="16sp"
-        android:fontFamily="@font/oxygen_light" />
 
     <TextView
+        android:id="@+id/procMob"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
@@ -67,6 +58,7 @@
         android:fontFamily="@font/oxygen_light" />
 
     <TextView
+        android:id="@+id/procEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
@@ -77,15 +69,17 @@
         android:textColor="#ffff"
         android:textSize="16sp"
         android:fontFamily="@font/oxygen_light" />
+
+
     <TextView
-        android:id="@+id/procRoom"
+        android:id="@+id/meet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:gravity="center"
         android:paddingTop="10dp"
-        android:paddingBottom="15dp"
-        android:text="Room No. : AB1 - 202"
+        android:paddingBottom="10dp"
+        android:text="Meeting Venue : "
         android:textColor="#ffff"
         android:textSize="16sp"
         android:fontFamily="@font/oxygen_light" />
