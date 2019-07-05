@@ -57,7 +57,7 @@ public class AntiRaggingActivity extends AppCompatActivity {
                     RelativeLayout.LayoutParams.MATCH_PARENT,
                     RelativeLayout.LayoutParams.WRAP_CONTENT
             );
-            int top = 16, bottom = 16, right = 16, left = 4;
+            int top = 16, bottom = 16, right = 4, left = 4;
             params.setMargins(left, top, right, bottom);
             view.setLayoutParams(params);
 
@@ -97,7 +97,7 @@ public class AntiRaggingActivity extends AppCompatActivity {
                     RelativeLayout.LayoutParams.MATCH_PARENT,
                     RelativeLayout.LayoutParams.WRAP_CONTENT
             );
-            int top = 16, bottom = 16, right = 16, left = 4;
+            int top = 16, bottom = 16, right = 4, left = 4;
             params.setMargins(left, top, right, bottom);
             view.setLayoutParams(params);
 
