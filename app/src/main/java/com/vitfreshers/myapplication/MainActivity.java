@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText departement;
     private EditText regNo;
+    String dep;
     final Context context = this;
 
     String regno;
@@ -72,11 +73,30 @@ public class MainActivity extends AppCompatActivity {
                 TextView mechanical = dialog.findViewById(R.id.mech);
                 TextView ecm = dialog.findViewById(R.id.ecm);
                 TextView civil = dialog.findViewById(R.id.civil);
+                TextView cyber = dialog.findViewById(R.id.cyber);
+                TextView ai = dialog.findViewById(R.id.ai);
+                TextView mba = dialog.findViewById(R.id.mba);
 
                 cse.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        departement.setText("CSE");
+                        departement.setText("B.Tech CSE");
+                        dialog.dismiss();
+                    }
+                });
+
+                cyber.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        departement.setText("B.Tech CSE (Cyber)");
+                        dialog.dismiss();
+                    }
+                });
+
+                ai.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        departement.setText("B.Tech CSE (A.I.)");
                         dialog.dismiss();
                     }
                 });
@@ -84,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 eee.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        departement.setText("EEE");
+                        departement.setText("B.Tech EEE");
                         dialog.dismiss();
                     }
                 });
@@ -92,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 ece.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        departement.setText("ECE");
+                        departement.setText("B.Tech ECE");
                         dialog.dismiss();
                     }
                 });
@@ -100,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                 ecm.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        departement.setText("ECM");
+                        departement.setText("B.Tech ECM");
                         dialog.dismiss();
                     }
                 });
@@ -108,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                 civil.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        departement.setText("CIVIL");
+                        departement.setText("B.Tech Civil");
                         dialog.dismiss();
                     }
                 });
@@ -116,7 +136,15 @@ public class MainActivity extends AppCompatActivity {
                 mechanical.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        departement.setText("MECHANICAL");
+                        departement.setText("B.Tech Mechanical");
+                        dialog.dismiss();
+                    }
+                });
+
+                mba.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        departement.setText("MBA");
                         dialog.dismiss();
                     }
                 });
@@ -134,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         regno = regNo.getText().toString().trim();
-        String dep = departement.getText().toString().trim();
+        dep = departement.getText().toString().trim();
         pb=findViewById(R.id.progressBar);
 
         if(regno.isEmpty() || dep .isEmpty()) {
@@ -220,6 +248,7 @@ public class MainActivity extends AppCompatActivity {
                 SaveSharedPreference.setField("CurrentUser",regno);
                 SaveSharedPreference.setField("CurrentUserProcName",ProctorName);
                 SaveSharedPreference.setField("CurrentUserProcRoom",ProctorRoom);
+                SaveSharedPreference.setField("CurrentUserDep",dep);
 
                 Intent intent = new Intent(getApplicationContext(), AfterLoginActivity.class);
                 startActivity(intent);

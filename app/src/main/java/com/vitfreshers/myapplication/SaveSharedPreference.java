@@ -30,6 +30,7 @@ public class SaveSharedPreference
         ed.remove("CurrentUser");
         ed.remove("CurrentUserProcName");
         ed.remove("CurrentUserProcRoom");
+        ed.remove("CurrentUserDep");
         ed.clear();
         ed.commit();
     }

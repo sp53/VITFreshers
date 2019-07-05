@@ -41,24 +41,36 @@
                 android:paddingBottom="10dp"
                 android:fontFamily="@font/oxygen_light"
                 android:gravity="center"
-                android:text="CSE"
+                android:text="B.Tech CSE"
                 android:textColor="#ffff"
                 android:textSize="16sp"
                 app:fontFamily="@font/oxygen_light" />
 
             <TextView
-                android:id="@+id/eee"
+                android:id="@+id/cyber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
+                android:paddingTop="15dp"
                 android:paddingBottom="10dp"
                 android:fontFamily="@font/oxygen_light"
                 android:gravity="center"
-                android:text="EEE"
+                android:text="B.Tech CSE (Cyber)"
                 android:textColor="#ffff"
                 android:textSize="16sp"
                 app:fontFamily="@font/oxygen_light" />
 
+            <TextView
+                android:id="@+id/ai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="B.Tech CSE (A.I.)"
+                android:textColor="#ffff"
+                android:textSize="16sp"
+                app:fontFamily="@font/oxygen_light" />
 
             <TextView
                 android:id="@+id/ece"
@@ -68,9 +80,23 @@
                 android:paddingBottom="10dp"
                 android:fontFamily="@font/oxygen_light"
                 android:gravity="center"
-                android:text="ECE"
+                android:text="B.Tech ECE"
                 android:textColor="#ffff"
                 android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/eee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="B.Tech EEE"
+                android:textColor="#ffff"
+                android:textSize="16sp"
+                app:fontFamily="@font/oxygen_light" />
+
 
             <TextView
                 android:id="@+id/ecm"
@@ -80,7 +106,7 @@
                 android:paddingBottom="10dp"
                 android:fontFamily="@font/oxygen_light"
                 android:gravity="center"
-                android:text="ECM"
+                android:text="B.Tech ECM"
                 android:textColor="#ffff"
                 android:textSize="16sp" />
 
@@ -92,7 +118,7 @@
                 android:paddingBottom="10dp"
                 android:fontFamily="@font/oxygen_light"
                 android:gravity="center"
-                android:text="CIVIL"
+                android:text="B.tech Civil"
                 android:textColor="#ffff"
                 android:textSize="16sp" />
 
@@ -104,9 +130,23 @@
                 android:paddingBottom="15dp"
                 android:fontFamily="@font/oxygen_light"
                 android:gravity="center"
-                android:text="MECHANICAL"
+                android:text="B.Tech Mechanical"
                 android:textColor="#ffff"
                 android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="MBA"
+                android:textColor="#ffff"
+                android:textSize="16sp"
+                app:fontFamily="@font/oxygen_light" />
+
         </LinearLayout>
 
     </ScrollView>
