@@ -82,8 +82,6 @@
         android:layout_width="311dp"
         android:layout_height="75dp"
         android:layout_margin="1dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/after_login_button"
         android:drawableLeft="@drawable/ic_directions_black_40dp"
         android:drawablePadding="1dp"
@@ -96,9 +94,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/button"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.120000005" />
+        app:layout_constraintVertical_bias="0.069" />
 
     <Button
         android:id="@+id/button2"
@@ -108,6 +107,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/after_login_button"
+        android:drawableStart="@drawable/ic_person_black_40dp"
         android:drawableLeft="@drawable/ic_person_black_40dp"
         android:drawablePadding="1dp"
         android:fontFamily="@font/oxygen_light"
@@ -122,9 +122,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/button4"
         app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.161"
-        android:drawableStart="@drawable/ic_person_black_40dp" />
-
+        app:layout_constraintVertical_bias="0.058" />
 
 
     <Button
@@ -152,13 +150,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.106" />
+        app:layout_constraintVertical_bias="0.089999974" />
 
     <Button
+        android:id="@+id/button3"
         android:layout_width="311dp"
         android:layout_height="75dp"
         android:layout_margin="1dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="48dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/after_login_button"
         android:drawableLeft="@drawable/ic_cancel_black_40dp"
@@ -172,9 +171,32 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.304" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:layout_width="311dp"
+        android:layout_height="75dp"
+        android:layout_margin="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/after_login_button"
+        android:drawableLeft="@drawable/ic_info_white_40dp"
+        android:drawablePadding="1dp"
+        android:fontFamily="@font/oxygen_light"
+        android:onClick="open_faq_and_form_activity"
+        android:paddingLeft="20dp"
+        android:paddingRight="42dp"
+        android:text="FAQ AND FORM"
+        android:textColor="#ffff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.171" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

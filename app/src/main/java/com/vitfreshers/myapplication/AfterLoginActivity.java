@@ -131,4 +131,7 @@ public class AfterLoginActivity extends AppCompatActivity {
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
 
     }
+
+    public void open_faq_and_form_activity(View view) {
+    }
 }
