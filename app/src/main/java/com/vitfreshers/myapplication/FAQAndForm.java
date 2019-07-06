@@ -35,6 +35,7 @@ public class FAQAndForm extends AppCompatActivity {
         pbr = findViewById(R.id.progressBar2);
 
         disp = findViewById(R.id.webView);
+        disp.setBackgroundColor(0);
         disp.getSettings().setJavaScriptEnabled(true);
         disp.loadUrl("http://vitappapi.herokuapp.com/faqffcs.php");
 
