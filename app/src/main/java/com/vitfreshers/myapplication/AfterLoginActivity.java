@@ -43,7 +43,7 @@ public class AfterLoginActivity extends AppCompatActivity {
         actionBar.setTitle("VIT Freshers");
 
         TextView tv = findViewById(R.id.textView);
-        tv.setText("Hello, "+SaveSharedPreference.getField("CurrentUserName"));
+        tv.setText("Hello! "+SaveSharedPreference.getField("CurrentUserName"));
 
 
     }

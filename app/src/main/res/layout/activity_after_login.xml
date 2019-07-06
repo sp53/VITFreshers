@@ -50,7 +50,8 @@
                 android:paddingRight="8dp"
                 android:text="LOGOUT"
                 android:textColor="@color/colorAccent"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
@@ -66,9 +67,11 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:fontFamily="@font/oxygen_light"
+        android:gravity="center"
         android:text="Hello!"
         android:textColor="#ffff"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -191,7 +194,8 @@
         android:onClick="open_faq_and_form_activity"
         android:paddingLeft="20dp"
         android:paddingRight="42dp"
-        android:text="FAQ AND FORM"
+        android:text="FAQs &amp; FORM"
+        android:textAllCaps="false"
         android:textColor="#ffff"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"

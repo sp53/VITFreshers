@@ -3,13 +3,20 @@ package com.vitfreshers.myapplication;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +26,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdate;
@@ -40,6 +48,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     MarkerOptions mo;
     final Context context = this;
     private FusedLocationProviderClient fusedLocationClient;
+
 
 
     Map<String,double[]> ltlng = new HashMap<String, double[]>();
@@ -296,7 +305,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     public void onMapChange(String s ,double lat ,double longi)
     {
-        //mMap.clear();
+        mMap.clear();
         final String lat_for_direction=""+lat;
         final String long_for_direction=""+longi;
 
@@ -346,4 +355,5 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onBackPressed();
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
+
 }
