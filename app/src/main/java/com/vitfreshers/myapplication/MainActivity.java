@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -178,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+
         regno = regNo.getText().toString().trim();
         dep = departement.getText().toString().trim();
         pb=findViewById(R.id.progressBar);
@@ -188,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
         }
         pb.setVisibility(View.VISIBLE);
         getJSON();
+
     }
 
     // json data
@@ -247,7 +250,7 @@ public class MainActivity extends AppCompatActivity {
                 URL url= new URL(json_url);
                 HttpURLConnection httpURLConnection;
                 httpURLConnection = (HttpURLConnection) url.openConnection();
-                BufferedReader br =new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+                BufferedReader br = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
                 StringBuilder sb=new StringBuilder();
                 while((JSON_STRING=br.readLine())!=null)
                 {
