@@ -82,6 +82,8 @@
         android:layout_width="311dp"
         android:layout_height="75dp"
         android:layout_margin="1dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="1dp"
         android:background="@drawable/after_login_button"
         android:drawableLeft="@drawable/ic_directions_black_40dp"
         android:drawablePadding="1dp"
@@ -92,20 +94,19 @@
         android:text="GET DIRECTION"
         android:textColor="#ffff"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="@+id/button"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.069" />
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="311dp"
         android:layout_height="75dp"
         android:layout_margin="1dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="1dp"
         android:background="@drawable/after_login_button"
         android:drawableStart="@drawable/ic_person_black_40dp"
         android:drawableLeft="@drawable/ic_person_black_40dp"
@@ -117,12 +118,12 @@
         android:text="PROCTOR"
         android:textColor="#ffff"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="@+id/button4"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/button4"
         app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.058" />
+        app:layout_constraintVertical_bias="0.219" />
 
 
     <Button
@@ -157,8 +158,8 @@
         android:layout_width="311dp"
         android:layout_height="75dp"
         android:layout_margin="1dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="1dp"
         android:background="@drawable/after_login_button"
         android:drawableLeft="@drawable/ic_cancel_black_40dp"
         android:drawablePadding="1dp"
@@ -169,19 +170,19 @@
         android:text="ANTI RAGGING"
         android:textColor="#ffff"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <Button
+        android:id="@+id/button5"
         android:layout_width="311dp"
         android:layout_height="75dp"
         android:layout_margin="1dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="187dp"
         android:background="@drawable/after_login_button"
         android:drawableLeft="@drawable/ic_info_white_40dp"
         android:drawablePadding="1dp"
@@ -196,7 +197,6 @@
         app:layout_constraintEnd_toEndOf="@+id/button3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
-        app:layout_constraintVertical_bias="0.171" />
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

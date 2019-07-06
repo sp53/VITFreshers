@@ -133,5 +133,8 @@ public class AfterLoginActivity extends AppCompatActivity {
     }
 
     public void open_faq_and_form_activity(View view) {
+        Intent intent = new Intent(this, FAQAndForm.class);
+        startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 }
