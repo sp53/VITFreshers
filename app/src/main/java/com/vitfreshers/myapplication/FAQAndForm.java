@@ -4,6 +4,8 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,6 +31,7 @@ public class FAQAndForm extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("VIT Freshers");
 
+
         pbr = findViewById(R.id.progressBar2);
 
         disp = findViewById(R.id.webView);
@@ -45,6 +48,12 @@ public class FAQAndForm extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void talentHunt(View view)
+    {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW).setData( Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSfXyLfm9yWKKO_nWDJm88G3Ug_F_-v5h5LM4kJeDOSKLR2I-Q/viewform"));
+        startActivity(browserIntent);
         //disp.loadUrl("https://forms.gle/bYTuXW9TdMnngypz9");
     }
 
