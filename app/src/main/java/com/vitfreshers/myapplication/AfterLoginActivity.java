@@ -86,7 +86,7 @@ public class AfterLoginActivity extends AppCompatActivity {
         TextView tv4=dialog.findViewById(R.id.procEmail);
         tv4.setText("Email Id : "+SaveSharedPreference.getField("CurrentUserProcEmail"));
         TextView tv5=dialog.findViewById(R.id.meet);
-        tv5.setText("Meeting Venue : "+SaveSharedPreference.getField("CurrentUserProcMeet"));
+        tv5.setText("Proctor Meet : "+SaveSharedPreference.getField("CurrentUserProcMeet"));
 
         dialog.show();
 
