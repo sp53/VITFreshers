@@ -12,6 +12,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -277,10 +278,18 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public boolean onMarkerClick(Marker marker)
             {
-                Uri mydir = Uri.parse("google.navigation:q=12.840722,80.153431");
-                Intent mapIntent = new Intent(Intent.ACTION_VIEW, mydir);
-                mapIntent.setPackage("com.google.android.apps.maps");
-                startActivity(mapIntent);
+
+                if(isGoogleMapsInstalled())
+                {
+                    Uri mydir = Uri.parse("google.navigation:q=12.840722,80.153431");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, mydir);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                }
+                else
+                {
+                    Toast.makeText(MapsActivity.this, "Google Maps not installed on your mobile.", Toast.LENGTH_LONG).show();
+                }
                 return true;
             }
         });
@@ -314,10 +323,19 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public boolean onMarkerClick(Marker marker)
             {
-                Uri mydir = Uri.parse("google.navigation:q="+lat_for_direction+","+long_for_direction);
-                Intent mapIntent = new Intent(Intent.ACTION_VIEW, mydir);
-                mapIntent.setPackage("com.google.android.apps.maps");
-                startActivity(mapIntent);
+
+                if(isGoogleMapsInstalled())
+                {
+                    Uri mydir = Uri.parse("google.navigation:q="+lat_for_direction+","+long_for_direction);
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, mydir);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                }
+                else
+                {
+                    Toast.makeText(MapsActivity.this, "Google Maps not installed on your mobile.", Toast.LENGTH_LONG).show();
+                }
+
                 return true;
             }
         });
@@ -354,6 +372,19 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+    }
+
+    public boolean isGoogleMapsInstalled()
+    {
+        try
+        {
+            ApplicationInfo info = getPackageManager().getApplicationInfo("com.google.android.apps.maps", 0 );
+            return true;
+        }
+        catch(PackageManager.NameNotFoundException e)
+        {
+            return false;
+        }
     }
 
 }

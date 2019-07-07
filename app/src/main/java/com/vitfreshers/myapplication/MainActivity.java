@@ -76,6 +76,11 @@ public class MainActivity extends AppCompatActivity {
                 TextView civil = dialog.findViewById(R.id.civil);
                 TextView cyber = dialog.findViewById(R.id.cyber);
                 TextView ai = dialog.findViewById(R.id.ai);
+                TextView mtechse = dialog.findViewById(R.id.mtechse);
+                TextView mtechba = dialog.findViewById(R.id.mtechba);
+                TextView law = dialog.findViewById(R.id.law);
+                TextView fashion = dialog.findViewById(R.id.fashion);
+                TextView mca = dialog.findViewById(R.id.mca);
                 TextView mba = dialog.findViewById(R.id.mba);
 
                 cse.setOnClickListener(new View.OnClickListener() {
@@ -138,6 +143,46 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         departement.setText("B.Tech Mechanical");
+                        dialog.dismiss();
+                    }
+                });
+
+                mtechse.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        departement.setText("M.Tech SE");
+                        dialog.dismiss();
+                    }
+                });
+
+                mtechba.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        departement.setText("M.Tech BA");
+                        dialog.dismiss();
+                    }
+                });
+
+                mca.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        departement.setText("MCA");
+                        dialog.dismiss();
+                    }
+                });
+
+                law.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        departement.setText("LAW");
+                        dialog.dismiss();
+                    }
+                });
+
+                fashion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        departement.setText("Fashion");
                         dialog.dismiss();
                     }
                 });
@@ -213,10 +258,10 @@ public class MainActivity extends AppCompatActivity {
                     u=u+"BCE";
                     break;
                 case "B.Tech CSE (Cyber)":
-                    u=u+"BCE";
+                    u=u+"CYBER";
                     break;
                 case "B.Tech CSE (A.I.)":
-                    u=u+"BCE";
+                    u=u+"AI";
                     break;
                 case "B.Tech EEE":
                     u=u+"BEE";
@@ -232,6 +277,21 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case "B.Tech Mechanical":
                     u=u+"BME";
+                    break;
+                case "M.Tech SE":
+                    u=u+"MTECHSE";
+                    break;
+                case "M.Tech BA":
+                    u=u+"MTECHBA";
+                    break;
+                case "MCA":
+                    u=u+"MCA";
+                    break;
+                case "LAW":
+                    u=u+"LAW";
+                    break;
+                case "Fashion":
+                    u=u+"FAS";
                     break;
                 case "MBA":
                     u=u+"MBA";
@@ -264,8 +324,10 @@ public class MainActivity extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            catch (Exception e)
+            {}
 
-            return null;
+            return "e";
         }
 
         @Override
@@ -277,6 +339,13 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
 
             indata=result;
+            if(indata.equals("e"))
+            {
+                Toast.makeText(getApplicationContext(), "We are facing a server issue. Please Login after some time.", Toast.LENGTH_LONG).show();
+                pb.setVisibility(View.INVISIBLE);
+                return;
+
+            }
 
 
             try {
@@ -301,6 +370,9 @@ public class MainActivity extends AppCompatActivity {
                 String ProctorEmail = jo.getString("ProcEmail");
                 String ProcMeet = jo.getString("MeetingVenue");
                 String studentName = jo.getString("Name");
+                String studentRegno = jo.getString("Reg");
+                String meetdate = jo.getString("MeetDate");
+                ProcMeet=ProcMeet+" on "+meetdate;
 
                 SaveSharedPreference.setField("CurrentUser",regno);
                 SaveSharedPreference.setField("CurrentUserName",studentName);
@@ -310,6 +382,7 @@ public class MainActivity extends AppCompatActivity {
                 SaveSharedPreference.setField("CurrentUserProcEmail",ProctorEmail);
                 SaveSharedPreference.setField("CurrentUserProcMeet",ProcMeet);
                 SaveSharedPreference.setField("CurrentUserDep",dep);
+                SaveSharedPreference.setField("CurrentUserRegno",studentRegno);
 
                 Intent intent = new Intent(getApplicationContext(), AfterLoginActivity.class);
                 startActivity(intent);

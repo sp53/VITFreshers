@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -18,7 +19,7 @@ import java.net.URL;
 
 public class dptScheduleData
 {
-    public  int length;
+    public  int length=0;
     public  String name[];
     public  String date[];
     public  String time[];
@@ -49,10 +50,10 @@ public class dptScheduleData
                     u=u+"BCE";
                     break;
                 case "B.Tech CSE (Cyber)":
-                    u=u+"BCE";
+                    u=u+"CYBER";
                     break;
                 case "B.Tech CSE (A.I.)":
-                    u=u+"BCE";
+                    u=u+"AI";
                     break;
                 case "B.Tech EEE":
                     u=u+"BEE";
@@ -68,6 +69,21 @@ public class dptScheduleData
                     break;
                 case "B.Tech Mechanical":
                     u=u+"BME";
+                    break;
+                case "M.Tech SE":
+                    u=u+"MTECHSE";
+                    break;
+                case "M.Tech BA":
+                    u=u+"MTECHBA";
+                    break;
+                case "MCA":
+                    u=u+"MCA";
+                    break;
+                case "LAW":
+                    u=u+"LAW";
+                    break;
+                case "Fashion":
+                    u=u+"FAS";
                     break;
                 case "MBA":
                     u=u+"MBA";
@@ -100,6 +116,10 @@ public class dptScheduleData
         }
 
         indata=s;
+        if(indata.equals("e"))
+        {
+            return;
+        }
 
 
         try {
@@ -163,8 +183,11 @@ public class dptScheduleData
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            catch (Exception e)
+            {
+            }
 
-            return null;
+            return "e";
         }
 
         @Override
@@ -176,6 +199,10 @@ public class dptScheduleData
         protected void onPostExecute(String result) {
 
             indata=result;
+            if(indata.equals("e"))
+            {
+                return;
+            }
 
 
             try {

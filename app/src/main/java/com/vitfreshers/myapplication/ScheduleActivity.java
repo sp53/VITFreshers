@@ -76,6 +76,12 @@ public class ScheduleActivity extends AppCompatActivity {
                 objc=new dptScheduleData();
                 objc.fetchData(0,viewGroup);
 
+                if(objd.length==0 || objc.length==0)
+                {
+                    Toast.makeText(getApplicationContext(), "We are facing a server issue. Please open after some time.", Toast.LENGTH_LONG).show();
+                     finish();
+                }
+
                 TextView pb =findViewById(R.id.pbSchedule);
                 pb.setVisibility(View.INVISIBLE);
                 setupViewPager(mviewpager);

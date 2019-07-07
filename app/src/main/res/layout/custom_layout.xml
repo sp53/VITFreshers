@@ -50,7 +50,7 @@
                 android:id="@+id/cyber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="15dp"
+                android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:fontFamily="@font/oxygen_light"
                 android:gravity="center"
@@ -63,7 +63,7 @@
                 android:id="@+id/ai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="15dp"
+                android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:fontFamily="@font/oxygen_light"
                 android:gravity="center"
@@ -133,6 +133,71 @@
                 android:text="B.Tech Mechanical"
                 android:textColor="#ffff"
                 android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mtechse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="M.Tech SE"
+                android:textColor="#ffff"
+                android:textSize="16sp"
+                app:fontFamily="@font/oxygen_light" />
+
+            <TextView
+                android:id="@+id/mtechba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="M.Tech BA"
+                android:textColor="#ffff"
+                android:textSize="16sp"
+                app:fontFamily="@font/oxygen_light" />
+
+            <TextView
+                android:id="@+id/mca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="MCA"
+                android:textColor="#ffff"
+                android:textSize="16sp"
+                app:fontFamily="@font/oxygen_light" />
+
+            <TextView
+                android:id="@+id/law"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="LAW"
+                android:textColor="#ffff"
+                android:textSize="16sp"
+                app:fontFamily="@font/oxygen_light" />
+
+            <TextView
+                android:id="@+id/fashion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="Fashion"
+                android:textColor="#ffff"
+                android:textSize="16sp"
+                app:fontFamily="@font/oxygen_light" />
 
             <TextView
                 android:id="@+id/mba"
