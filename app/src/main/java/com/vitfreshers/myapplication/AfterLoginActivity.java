@@ -139,4 +139,10 @@ public class AfterLoginActivity extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
+
+    public void open_faculty_info(View view) {
+        Intent intent = new Intent(this, FacultyInformation.class);
+        startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+    }
 }

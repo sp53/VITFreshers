@@ -73,6 +73,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.vitfreshers.myapplication.AfterLoginActivity" />
         </activity>
+        <activity
+            android:name=".FacultyInformation"
+            android:parentActivityName=".AfterLoginActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.vitfreshers.myapplication.AfterLoginActivity" />
+        </activity>
     </application>
 
 </manifest>
