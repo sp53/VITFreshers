@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="220dp"
+    android:background="@drawable/custom_layout_styler"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oxygen_light"
+        android:gravity="center"
+        android:text="Choose from below"
+        android:padding="12dp"
+        android:background="@drawable/proctor_dialog_button"
+        android:textColor="#ffff"
+        android:textSize="18sp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/scse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="SCSE"
+                android:textColor="#ffff"
+                android:textSize="16sp"
+                app:fontFamily="@font/oxygen_light" />
+
+            <TextView
+                android:id="@+id/sense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="SENSE"
+                android:textColor="#ffff"
+                android:textSize="16sp"
+                app:fontFamily="@font/oxygen_light" />
+
+
+            <TextView
+                android:id="@+id/smbs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="SMBS"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="SAS"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/law"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="15dp"
+                android:fontFamily="@font/oxygen_light"
+                android:gravity="center"
+                android:text="LAW"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

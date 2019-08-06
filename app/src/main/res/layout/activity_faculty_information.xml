@@ -39,4 +39,32 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <EditText
+        android:id="@+id/school_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:drawableStart="@drawable/ic_account_balance_black_30dp"
+        android:drawableLeft="@drawable/ic_account_balance_black_30dp"
+        android:drawableEnd="@drawable/ic_arrow_drop_down"
+        android:drawableRight="@drawable/ic_arrow_drop_down"
+        android:drawablePadding="15dp"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/oxygen_light"
+        android:hint="Choose School"
+        android:inputType="textNoSuggestions"
+        android:maxLines="1"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:scrollHorizontally="true"
+        android:textColor="#ffff"
+        android:textColorHint="#ffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_fi" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
