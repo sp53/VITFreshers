@@ -139,8 +139,15 @@ public class AfterLoginActivity extends AppCompatActivity {
     }
 
     public void open_faculty_info(View view) {
-        Intent intent = new Intent(this, FacultyInformation.class);
-        startActivity(intent);
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        if(!CheckNetwork.isInternetAvailable(this)) //returns true if internet available
+        {
+            Toast.makeText(this, "Please open your Internet Connection.", Toast.LENGTH_LONG).show();
+            return;
+        }
+        else {
+            Intent intent = new Intent(this, FacultyInformation.class);
+            startActivity(intent);
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        }
     }
 }

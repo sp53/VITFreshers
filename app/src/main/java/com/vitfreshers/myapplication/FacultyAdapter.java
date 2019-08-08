@@ -10,6 +10,8 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -205,8 +207,10 @@ public class FacultyAdapter extends BaseAdapter implements Filterable {
         protected void onPostExecute(String result) {
 
             indata=result;
-            if(indata.equals("e"))
+            if(indata.equals("empty"))
             {
+                Toast.makeText(activity, "We are facing a server issue. Please try after some time.", Toast.LENGTH_LONG).show();
+                activity.finish();
                 return;
             }
 
