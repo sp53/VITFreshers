@@ -21,26 +21,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentLeft="true"
-                android:fontFamily="@font/oxygen_light"
-                android:gravity="center"
-                android:text="VIT Freshers"
-                android:textColor="#ffff"
-                android:textSize="20sp" />
-
-        </RelativeLayout>
 
     </androidx.appcompat.widget.Toolbar>
 
-    <EditText
-        android:id="@+id/school_edit_text"
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -48,23 +33,38 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:drawableStart="@drawable/ic_account_balance_black_30dp"
-        android:drawableLeft="@drawable/ic_account_balance_black_30dp"
-        android:drawableEnd="@drawable/ic_arrow_drop_down"
-        android:drawableRight="@drawable/ic_arrow_drop_down"
-        android:drawablePadding="15dp"
-        android:focusableInTouchMode="false"
-        android:fontFamily="@font/oxygen_light"
-        android:hint="Choose School"
-        android:inputType="textNoSuggestions"
-        android:maxLines="1"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        android:scrollHorizontally="true"
-        android:textColor="#ffff"
-        android:textColorHint="#ffff"
+        android:background="@drawable/edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_fi"
+        app:searchIcon="@drawable/ic_search_black_24dp" />
+
+    <ListView
+        android:id="@+id/facultyLV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_fi" />
+        app:layout_constraintTop_toBottomOf="@+id/searchView"/>
+
+    <ProgressBar
+        android:id="@+id/facultypbr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/facultyLV"
+        app:layout_constraintEnd_toEndOf="@+id/facultyLV"
+        app:layout_constraintStart_toStartOf="@+id/facultyLV"
+        app:layout_constraintTop_toTopOf="@+id/facultyLV" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

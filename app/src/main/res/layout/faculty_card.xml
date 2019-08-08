@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/schedule_layout_srtyler">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="8dp"
+        android:paddingBottom="14dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/empid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Employee ID"
+            android:textColor="#ffff"
+            android:textSize="12sp"
+            android:fontFamily="@font/oxygen_light" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Employee Name"
+            android:textColor="#ffff"
+            android:textSize="12sp"
+            android:fontFamily="@font/oxygen_light" />
+
+        <TextView
+            android:id="@+id/school"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="School"
+            android:textColor="#ffff"
+            android:textSize="12sp"
+            android:fontFamily="@font/oxygen_light" />
+
+        <TextView
+            android:id="@+id/venue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Venue"
+            android:textColor="#ffff"
+            android:textSize="12sp"
+            android:fontFamily="@font/oxygen_light" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Email ID"
+            android:textColor="#ffff"
+            android:textSize="12sp"
+            android:fontFamily="@font/oxygen_light" />
+
+        <TextView
+            android:id="@+id/intercom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/oxygen_light"
+            android:gravity="center"
+            android:text="Intercom"
+            android:textColor="#ffff"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
