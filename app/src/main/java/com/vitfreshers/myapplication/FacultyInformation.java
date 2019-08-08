@@ -9,10 +9,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.SearchView;
 
 public class FacultyInformation extends AppCompatActivity {
 
-
+    SearchView sv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +32,28 @@ public class FacultyInformation extends AppCompatActivity {
 
 
         ListView lv = findViewById(R.id.facultyLV);
-        FacultyAdapter fadap = new FacultyAdapter(this,pbr);
-        lv.setAdapter(fadap);
+        final FacultyAdapter facultyAdapter = new FacultyAdapter(this,pbr);
+        lv.setAdapter(facultyAdapter);
 
+        sv = findViewById(R.id.searchView);
+        sv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sv.setIconified(false);
+            }
+        });
+        sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String sii) {
+                facultyAdapter.getFilter().filter(sii);
+                return false;
+            }
+        });
 
     }
 
@@ -46,11 +66,14 @@ public class FacultyInformation extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-    @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+
+        if (!sv.isIconified()){
+            sv.setIconified(true);}
+        else{
+            super.onBackPressed();
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        }
     }
 
 }

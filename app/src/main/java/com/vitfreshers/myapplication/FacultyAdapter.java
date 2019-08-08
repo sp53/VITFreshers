@@ -8,11 +8,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
-import androidx.recyclerview.widget.RecyclerView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -26,18 +23,20 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class FacultyAdapter extends BaseAdapter {
+public class FacultyAdapter extends BaseAdapter implements Filterable {
     private Activity activity;
 
     private LayoutInflater layoutInflater;
-     ProgressBar pbrobj;
+    ProgressBar pbrobj;
+    ArrayList<FacultyStore> mainList = new ArrayList<FacultyStore>();
+    ArrayList<FacultyStore> copymainList ;
 
-    String name[];
-    String id[];
-    String email[];
-    String intercom[];
-    String venue[];
-    String school[];
+    String name;
+    String id;
+    String email;
+    String intercom;
+    String venue;
+    String school;
 
 
 
@@ -79,34 +78,75 @@ public class FacultyAdapter extends BaseAdapter {
             holder =new contactholder();
 
             TextView t = view.findViewById(R.id.name); holder.tx_1=t;
-            t.setText(name[i]);
+            t.setText(mainList.get(i).name);
             TextView t2 = view.findViewById(R.id.empid); holder.tx_2=t2;
-            t2.setText(id[i]);
+            t2.setText(mainList.get(i).id);
             TextView t3 = view.findViewById(R.id.email); holder.tx_3=t3;
-            t3.setText(email[i]);
+            t3.setText(mainList.get(i).email);
             TextView t4 = view.findViewById(R.id.intercom); holder.tx_4=t4;
-            t4.setText(intercom[i]);
+            t4.setText(mainList.get(i).intercom);
             TextView t5 = view.findViewById(R.id.school); holder.tx_5=t5;
-            t5.setText(school[i]);
+            t5.setText(mainList.get(i).school);
             TextView t6 = view.findViewById(R.id.venue); holder.tx_6=t6;
-            t6.setText(venue[i]);
+            t6.setText(mainList.get(i).venue);
 
             view.setTag(holder);
         }
         else
         {
             holder=(contactholder) view.getTag();
-            holder.tx_1.setText(name[i]);
-            holder.tx_2.setText(id[i]);
-            holder.tx_3.setText(email[i]);
-            holder.tx_4.setText(intercom[i]);
-            holder.tx_5.setText(school[i]);
-            holder.tx_6.setText(venue[i]);
+            holder.tx_1.setText(mainList.get(i).name);
+            holder.tx_2.setText(mainList.get(i).id);
+            holder.tx_3.setText(mainList.get(i).email);
+            holder.tx_4.setText(mainList.get(i).intercom);
+            holder.tx_5.setText(mainList.get(i).school);
+            holder.tx_6.setText(mainList.get(i).venue);
 
         }
 
         return view;
     }
+
+    @Override
+    public Filter getFilter() {
+        return exfilter;
+    }
+
+    private Filter exfilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            ArrayList<FacultyStore> temp=new ArrayList<>();
+            if(charSequence == null || charSequence.length()==0)
+            {
+                temp.addAll(copymainList);
+            }
+            else
+            {
+                String check = charSequence.toString().toLowerCase().trim();
+
+                for(FacultyStore fs : copymainList)
+                {
+                    if(fs.name.toLowerCase().contains(check))
+                    {
+                        temp.add(fs);
+                    }
+                }
+            }
+            FilterResults result = new FilterResults();
+            result.values=temp;
+            return result ;
+        }
+
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+
+            mainList.clear();
+            mainList.addAll((ArrayList<FacultyStore>)filterResults.values);
+            length=mainList.size();
+            notifyD();
+
+        }
+    };
 
 
     static class contactholder
@@ -178,23 +218,21 @@ public class FacultyAdapter extends BaseAdapter {
 
                 jsarray = jsobject.getJSONArray("Faculty");
                 length=jsarray.length();
-                name=new String[length];
-                id=new String[length];
-                email=new String[length];
-                venue=new String[length];
-                intercom=new String[length];
-                school=new String[length];
 
                 for(int i=0;i<length;i++)
                 {
+
                     jo = jsarray.getJSONObject(i);
-                    name[i]= "Name : "+jo.getString("Name ");
-                    id[i] = "Employee ID : "+jo.getString("ID");
-                    school[i]="School : "+jo.getString("School");
-                    venue[i] = "Room : "+jo.getString("Venue");
-                    email[i] = "Email ID : "+jo.getString("Email");
-                    intercom[i] = "Intercom : "+jo.getString("Intercol");
+                    name= "Name : "+jo.getString("Name ");
+                    id = "Employee ID : "+jo.getString("ID");
+                    school="School : "+jo.getString("School");
+                    venue = "Room : "+jo.getString("Venue");
+                    email = "Email ID : "+jo.getString("Email");
+                    intercom = "Intercom : "+jo.getString("Intercol");
+                    FacultyStore obj=new FacultyStore(name,venue,id,school,email,intercom);
+                    mainList.add(obj);
                 }
+                copymainList = new ArrayList<FacultyStore>(mainList);
                 notifyD();
                 pbrobj.setVisibility(View.INVISIBLE);
 

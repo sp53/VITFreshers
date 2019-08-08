@@ -5,13 +5,13 @@ import android.content.SharedPreferences;
 
 public class SaveSharedPreference
 {
-    static SharedPreferences p;
+    static SharedPreferences shp;
     static SharedPreferences.Editor ed;
 
     public static void init(Context ctx)
     {
-        p = ctx.getSharedPreferences("VITFreshers_APP",ctx.MODE_PRIVATE);
-        ed = p.edit();
+        shp = ctx.getSharedPreferences("VITFreshers_APP",ctx.MODE_PRIVATE);
+        ed = shp.edit();
     }
 
     public static void setField(String key,String value)
@@ -22,7 +22,7 @@ public class SaveSharedPreference
 
     public static String getField(String s)
     {
-        return p.getString(s,null);
+        return shp.getString(s,null);
     }
 
     public static void logout()
