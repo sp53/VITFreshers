@@ -39,7 +39,9 @@ public class FacultyInformation extends AppCompatActivity {
         sv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sv.setIconified(false);
+                if(facultyAdapter.loaded) {
+                    sv.setIconified(false);
+                }
             }
         });
         sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -50,7 +52,9 @@ public class FacultyInformation extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String sii) {
-                facultyAdapter.getFilter().filter(sii);
+                if(facultyAdapter.loaded){
+                    facultyAdapter.getFilter().filter(sii);
+                }
                 return false;
             }
         });
@@ -67,13 +71,9 @@ public class FacultyInformation extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void onBackPressed() {
-
-        if (!sv.isIconified()){
-            sv.setIconified(true);}
-        else{
             super.onBackPressed();
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-        }
+
     }
 
 }

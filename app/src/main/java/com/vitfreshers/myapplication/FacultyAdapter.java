@@ -10,11 +10,9 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -39,13 +37,14 @@ public class FacultyAdapter extends BaseAdapter implements Filterable {
     String school;
 
 
-
+    boolean loaded;
     int length=0;
 
     public FacultyAdapter(Activity activity, ProgressBar obj) {
         this.activity = activity;
         this.layoutInflater = activity.getLayoutInflater();
         pbrobj=obj;
+        loaded=false;
         new BackgroundTask().execute();
     }
 
@@ -232,6 +231,7 @@ public class FacultyAdapter extends BaseAdapter implements Filterable {
                     FacultyStore obj=new FacultyStore(name,venue,id,school,email,intercom);
                     mainList.add(obj);
                 }
+                loaded=true;
                 copymainList = new ArrayList<FacultyStore>(mainList);
                 notifyD();
                 pbrobj.setVisibility(View.INVISIBLE);
