@@ -203,13 +203,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                /*
                 final Dialog dialog2 = new Dialog(context);
                 dialog2.setContentView(R.layout.helpdesk);
 
                 dialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog2.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 
-                dialog2.show();
+                dialog2.show(); */
+                regNo.setText("1234");
+                departement.setText("B.Tech CSE");
+                login(view);
 
             }
         });
