@@ -20,32 +20,53 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/oxygen_light"
             android:gravity="center"
             android:text="Event Name"
-            android:textColor="#ffff"
-            android:textSize="12sp"
-            android:fontFamily="@font/oxygen_light" />
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/colorAccent" />
 
         <TextView
             android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:gravity="center"
-            android:text="Description of event"
+            android:textSize="14sp"
+            android:text="Description"
             android:textColor="#ffff"
-            android:textSize="12sp"
             android:fontFamily="@font/oxygen_light" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/colorAccent" />
 
         <TextView
             android:id="@+id/venue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_marginTop="5dp"
             android:text="Venue"
+            android:gravity="center"
             android:textColor="#ffff"
-            android:textSize="12sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="14sp"
             android:fontFamily="@font/oxygen_light" />
 
 
@@ -53,45 +74,49 @@
             android:id="@+id/time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
             android:text="Time"
+            android:gravity="center"
             android:textColor="#ffff"
-            android:textSize="12sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="14sp"
             android:fontFamily="@font/oxygen_light" />
 
         <TextView
             android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:text="Date"
             android:gravity="center"
-            android:text="Date of event"
             android:textColor="#ffff"
-            android:textSize="12sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="14sp"
             android:fontFamily="@font/oxygen_light" />
 
         <TextView
             android:id="@+id/coord"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/oxygen_light"
             android:gravity="center"
-            android:text="Intercom"
+            android:fontFamily="@font/oxygen_light"
+            android:text="Coordinator"
             android:textColor="#ffff"
-            android:textSize="12sp" />
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="14sp" />
 
 
         <TextView
             android:id="@+id/contact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:gravity="center"
-            android:text="Employee ID"
+            android:text="Contact"
             android:textColor="#ffff"
-            android:textSize="12sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="14sp"
             android:fontFamily="@font/oxygen_light" />
 
     </LinearLayout>
