@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.vitfreshers.myapplication" android:targetSandboxVersion="1">
-
+    package="com.vitfreshers.myapplication"
+    android:targetSandboxVersion="1">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -16,10 +16,10 @@
         android:allowBackup="true"
         android:icon="@drawable/viticon"
         android:label="@string/app_name"
-        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activity_Event"></activity>
         <activity android:name=".FAQAndForm" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/schedule_layout_srtyler">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="8dp"
+        android:paddingBottom="14dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Event Name"
+            android:textColor="#ffff"
+            android:textSize="12sp"
+            android:fontFamily="@font/oxygen_light" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Description of event"
+            android:textColor="#ffff"
+            android:textSize="12sp"
+            android:fontFamily="@font/oxygen_light" />
+
+        <TextView
+            android:id="@+id/venue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Venue"
+            android:textColor="#ffff"
+            android:textSize="12sp"
+            android:fontFamily="@font/oxygen_light" />
+
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Time"
+            android:textColor="#ffff"
+            android:textSize="12sp"
+            android:fontFamily="@font/oxygen_light" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Date of event"
+            android:textColor="#ffff"
+            android:textSize="12sp"
+            android:fontFamily="@font/oxygen_light" />
+
+        <TextView
+            android:id="@+id/coord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/oxygen_light"
+            android:gravity="center"
+            android:text="Intercom"
+            android:textColor="#ffff"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Employee ID"
+            android:textColor="#ffff"
+            android:textSize="12sp"
+            android:fontFamily="@font/oxygen_light" />
+
+    </LinearLayout>
+
+</LinearLayout>

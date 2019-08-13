@@ -152,5 +152,15 @@ public class AfterLoginActivity extends AppCompatActivity {
     }
 
     public void open_events_info(View view) {
+        if(!CheckNetwork.isInternetAvailable(this)) //returns true if internet available
+        {
+            Toast.makeText(this, "Please open your Internet Connection.", Toast.LENGTH_LONG).show();
+            return;
+        }
+        else {
+            Intent intent = new Intent(this, Activity_Event.class);
+            startActivity(intent);
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        }
     }
 }
